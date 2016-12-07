@@ -89,3 +89,9 @@ ENV/
 .ropeproject
 
 # Created by .ignore support plugin (hsz.mobi)
+
+
+treetagger
+treetagger/**/*
+cache
+cache/**/*

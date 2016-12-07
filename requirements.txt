@@ -1,1 +1,9 @@
 Flask==0.10.1
+flask-restplus
+pdfminer2
+urllib3
+chardet
+bs4
+treetaggerwrapper
+numpy
+html5lib

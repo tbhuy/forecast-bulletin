@@ -34,6 +34,10 @@ Run the Docker the container¶
 
 	docker run -d -p 5000:5000 sparkinclimate
 
+	docker build -t sparkinclimate:latest .
+	docker run --name=sparkinclimate --restart unless-stopped -d -p 5000:5000 sparkinclimate
+	docker logs -f sparkinclimate
+
 
 Stop the Docker the container¶
 

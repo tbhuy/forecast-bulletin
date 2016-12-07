@@ -1,0 +1,46 @@
+FROM ubuntu:latest
+MAINTAINER Lamjed Ben Jabeur "Lamjed.Ben-Jabeur@irit.fr"
+RUN apt-get update -y
+RUN apt-get install -y wget
+RUN apt-get install -y libperl4-corelibs-perl
+RUN apt-get install -y python3 python3-pip
+RUN pip3 install --upgrade pip
+RUN pip3 install -U nltk
+RUN python3 -m nltk.downloader punkt
+RUN python3 -m nltk.downloader stopwords
+RUN python3 -m nltk.downloader snowball_data
+
+
+COPY . /sparkinclimate
+RUN rm -r sparkinclimate/cache
+WORKDIR /sparkinclimate
+
+
+WORKDIR treetagger
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagger-linux-3.2.1.tar.gz
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tagger-scripts.tar.gz
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/install-tagger.sh
+RUN tar zxvf tree-tagger-linux-3.2.1.tar.gz
+RUN tar -zxvf tagger-scripts.tar.gz
+WORKDIR lib
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-par-linux-3.2-utf8.bin.gz
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-chunker-par-linux-3.2-utf8.bin.gz
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-par-linux-3.2-utf8.bin.gz
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-chunker-par-linux-3.2-utf8.bin.gz
+RUN gunzip english-par-linux-3.2-utf8.bin.gz
+RUN gunzip english-chunker-par-linux-3.2-utf8.bin.gz
+RUN gunzip french-par-linux-3.2-utf8.bin.gz
+RUN gunzip french-chunker-par-linux-3.2-utf8.bin.gz
+RUN mv english-par-linux-3.2-utf8.bin english-utf8.par
+RUN mv english-chunker-par-linux-3.2-utf8.bin english-chunker.par
+RUN mv french-par-linux-3.2-utf8.bin french-utf8.par
+RUN mv french-chunker-par-linux-3.2-utf8.bin french-chunker.par
+WORKDIR ..
+RUN sh install-tagger.sh
+ENV PATH=$PATH:/sparkinclimate/treetagger/cmd:/sparkinclimate/treetagger/bin
+WORKDIR ..
+
+
+RUN pip3 install -r requirements.txt
+ENTRYPOINT ["python3"]
+CMD ["server.py"]
