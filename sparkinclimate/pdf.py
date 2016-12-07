@@ -2,6 +2,7 @@ import csv
 import json
 import os
 import re
+import sys
 import uuid
 
 # noinspection PyPackageRequirements
@@ -19,6 +20,9 @@ from sparkinclimate.places import Communes
 
 
 class PDFDocument(object):
+    month_names = [None, "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août",
+                   "Septembre", "Octobre", "Novembre", "Décembre"]
+
     def __init__(self, filename):
         self.__filename = filename
         self.__communes = None
@@ -30,7 +34,12 @@ class PDFDocument(object):
     def __load(self):
         if not self.__loaded:
             self.__communes = Communes()
-            self.__tagger = treetaggerwrapper.TreeTagger(TAGLANG='fr',TAGDIR='treetagger/', TAGINENC='utf-8',TAGOUTENC='utf-8')
+            tagdir = 'treetagger/'
+            if sys.platform.startswith('win'):
+                tagdir = 'treetagger-win/'
+            self.__tagger = treetaggerwrapper.TreeTagger(TAGLANG='fr', TAGDIR=tagdir, TAGINENC='utf-8',
+                                                         TAGOUTENC='utf-8')
+
             self.__stemmer = FrenchStemmer()
             self.__lexical = []
             files = ['resources/lexical/meteo-facts.csv', 'resources/lexical/meteo-words.csv',
@@ -100,7 +109,7 @@ class PDFDocument(object):
         body = soup.find('body')
         body = body.find('div')
 
-        template=None
+        template = None
         if os.path.isfile(template_file):
             with open(template_file, 'r') as file:
                 template = json.load(file)
@@ -203,12 +212,13 @@ class PDFDocument(object):
 
         return soup.prettify()
 
-    def facts(self):
+    def facts(self, region=None, date=None):
         logical = self.logical(template_file='resources/templates/bulletin-climatique.json')
         soup = BeautifulSoup(logical, 'html5lib')
-        return self.__extract(soup.find('div'),date="2015-01-31")
+        return {'facts': self.__extract(soup.find('div'), date=date, region=region)}
 
-    def __noungroup(self, tags):
+    def __noungroups(self, text):
+        tags = self.__pos_tags(text)
         chunks = []
         chunk = ""
         for tag in tags:
@@ -225,10 +235,35 @@ class PDFDocument(object):
             chunk = ""
         return chunks
 
-    def __extract(self, node, parent_title=None, date=None):
+    def __pos_tags(self, text):
+        tags = []
+        for tag in self.__tagger.TagText(text):
+            fields = re.split("\t", tag)
+            if len(fields) > 2:
+                tags.append(fields)
+        return tags
+
+
+
+    def __find_facts(self, text):
+        facts =set()
+        keywords=set()
+        groups = self.__noungroups(text)
+        for group in groups:
+            terms = re.split("\s+", group.strip().lower())
+            for term in terms:
+                term = term.strip().lower()
+                stem = self.__stemmer.stem(term)
+                if term in self.__lexical or stem in self.__lexical:
+                    keywords.add(term)
+                    facts.add(group.strip())
+                    break
+        return facts,keywords
+
+    def __extract(self, node, parent_title=None, date=None, region=None):
         self.__load()
         records = []
-        (dyear, dmonth, dday) = date.split("-")
+        (year, month, day) = date.split("-")
 
         fcount = 0
         for child in node.children:
@@ -253,78 +288,68 @@ class PDFDocument(object):
 
                             fact = title
 
-                            (dates, new_text) = TextUtils.extract_date(fact, year=dyear,
-                                                                       month=dmonth,
-                                                                       day=dday)
+                            (dates, new_text) = TextUtils.extract_date(fact, year=year,
+                                                                       month=month,
+                                                                       day=day)
 
-                            tags = []
-                            for tag in self.__tagger.TagText(new_text):
-                                fields = re.split("\t", tag)
-                                if len(fields) > 2:
-                                    tags.append(fields)
+                            (facts,keywords) = self.__find_facts(new_text)
+                            detected_places = self.__communes.annotate(title + " " + description, context={'region':region})
 
-                            nouns = []
-                            for tag in tags:
-                                if tag[1] == "NOM":
-                                    nouns.append(tag[2])
-                            groups = self.__noungroup(tags)
+                            for date_instance in dates:
+                                fact = WeatherFact()
 
-                            facts = []
-                            for group in groups:
-                                terms = re.split("\s+", group.strip().lower())
-                                for term in terms:
-                                    term = term.strip().lower()
-                                    stem = self.__stemmer.stem(term)
-                                    if term in self.__lexical or stem in self.__lexical:
-                                        facts.append(group.strip())
-                                        break
+                                fact.dateIssued = date
 
-                            detected_places = self.__communes.annotate(title + " " + description)
+                                date_fields = re.split(" ", date_instance)
+                                if len(date_fields) > 0:
+                                    fact.startDate = date_fields[0]
+                                    fact.endDate = date_fields[0]
+                                if len(date_fields) > 1:
+                                    fact.endDate = date_fields[1]
 
-                            if len(dates) < 1:
-                                dates = [date]
+                                fact.title = fact_raw
+                                fact.description = description
 
-                            rdates = []
-                            for idate in dates:
-                                d = re.split(" ", idate)
-                                if len(d) == 1:
-                                    rdates.append(d[0])
-                                else:
-                                    rdates.append(d)
+                                fact.facts = facts
+                                fact.keywords = keywords
 
-                            for idate in dates:
-                                fidate = re.split(" ", idate)
-                                fdate = fidate[0]
-                                fstartdate = fdate
-                                fenddate = None
-                                if len(fidate) > 1:
-                                    fenddate = fidate[1]
+                                fact.places = detected_places['places']
 
-                                # location_object = "data/places/" + str(location) + ".json"
-                                # if os.path.exists(location_object):
-                                #     with open(location_object, "r", encoding='utf-8') as json_data:
-                                #         jlocation = json.load(json_data)
+                                region_file = "resources/regions/" + TextUtils.normalize(region) + ".json"
+                                if os.path.exists(region_file):
+                                    with open(region_file) as json_data:
+                                        region_object = json.load(json_data)
+                                        fact.region = region_object
 
-                                mnames = [None, "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août",
-                                          "Septembre", "Octobre", "Novembre", "Décembre"]
+                                fact.date = {'year': int(year), 'month': PDFDocument.month_names[int(month)],
+                                             'day': int(day)}
 
-                                period = None
-                                if fenddate:
-                                    period = {"start": fstartdate, "end": fenddate}
-                                record = {
-                                    "year": int(dyear), "month": mnames[int(dmonth)], "day": int(dday),
-                                    "date": fdate, "dates": rdates, "period": period, "publication": date,
-                                    "fact": {"tag": facts, "terms": facts, "text": new_text, "raw": fact_raw},
-                                    "description": description,
-                                }
-
-                                record={"facts": facts, "date": date,"description": description}
-                                #"places": detected_places,
-                                #print(record)
-                                records.append(record)
+                                records.append(fact)
                         else:
-                            rds = self.__extract(section, parent_title=title, date=date)
+                            rds = self.__extract(section, parent_title=title, date=date, region=region)
                             if rds:
                                 for r in rds:
                                     records.append(r)
         return records
+
+
+class JSONSerializable(object):
+    def __repr__(self):
+        return json.dumps(self.__dict__)
+
+
+class WeatherFact(JSONSerializable):
+    def __init__(self):
+        super().__init__()
+        self.dateIssued = None
+        self.startDate = None
+        self.endDate = None
+        self.date = None
+
+        self.title = None
+        self.description = None
+
+        self.facts = None
+        self.keywords = None
+        self.places = None
+        self.region = None

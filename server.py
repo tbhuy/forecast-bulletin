@@ -1,6 +1,8 @@
 import os
 import re
 import uuid
+import csv
+import datetime
 
 from flask import Flask, request
 from flask_restplus import Api, Resource, fields
@@ -28,9 +30,18 @@ location = api.model('Location', {
     'lat': fields.Float(required=True, description='The latitude'),
     'lon': fields.Float(required=True, description='The longitude')
 })
-geometry = api.model('Geometry', {
-    'location': fields.Nested(location, required=False, description='The location')
+
+viewport = api.model('Viewport', {
+    'northeast': fields.Nested(location, required=True, description='The location'),
+    'southwest': fields.Nested(location, required=True, description='The location')
 })
+
+geometry = api.model('Geometry', {
+    'location': fields.Nested(location, required=False, description='The location'),
+    'viewport': fields.Nested(viewport, required=False, description='The location')
+})
+
+
 place = api.model('Place', {
     'name': fields.String(required=True, description='The name of the place'),
     'country': fields.String(required=False, description='The country of the place'),
@@ -88,18 +99,36 @@ class PlaceExtract(Resource):
 
 nspdf = api.namespace('pdf', description='PDF file parsing')
 
-pdf_parser = reqparse.RequestParser()
-pdf_parser.add_argument('pdf', location='files', type=FileStorage, required=True, help='The PDF file to be parsed')
 
 templates=['custom']
 for template in os.listdir('resources/templates'):
     templates.append(template.replace('.json',''))
+regions=[]
+try:
+    file = open('resources/region_list.csv', "r", encoding='utf-8')
+    reader = csv.reader(file, delimiter="\t", quotechar='"')
+    first = True
+    for row in reader:
+        if len(row)>0:
+            id = row[0] if row[0] != "" else None
+            name = row[1] if row[1] != "" else None
+            regions.append(name)
+finally:
+    file.close()
+
+pdf_parser = reqparse.RequestParser()
+#pdf_parser = api.parser()
+pdf_parser.add_argument('pdf', location='files', type=FileStorage, required=True, help='The PDF file to be parsed')
 
 pdf_logical = pdf_parser.copy()
 pdf_logical.add_argument('template', choices=templates, type=str, required=False, location='from', help='The text to be annotated')
 pdf_logical.add_argument('custom-template', location='files', type=FileStorage, required=False, help='The PDF file to be parsed')
 
 
+pdf_facts = pdf_parser.copy()
+pdf_facts.add_argument('region', type=str, required=True,trim=True, location='form',choices=regions, help='The text to be annotated')
+pdf_facts.add_argument('date', type=str, required=True,trim=True,  location='form', default=datetime.datetime.now().strftime ("%Y-%m-%d"),
+                             help='Comma-separated contexts (e.g. region:aquitaine)')
 
 html = api.model('html', {'html': fields.String(required=False, description='HTML source code')})
 
@@ -110,6 +139,41 @@ level = api.model('Level', {
 })
 template = api.model('Template', {
     'levels': fields.List(fields.Nested(level))
+})
+
+day = api.model('Day', {
+    'year': fields.Integer(required=True, description='The region of the place (France)'),
+    'month': fields.String(required=False, description='The country of the place'),
+    'day': fields.Integer(required=True, description='The region of the place (France)')
+})
+
+region = api.model('Region', {
+    'name': fields.String(required=False, description='The country of the place'),
+    'formatted_address': fields.String(required=False, description='The country of the place'),
+    'geometry': fields.Nested(geometry, required=False, description='The geometry')
+})
+
+
+fact = api.model('Fact', {
+    'title': fields.String(required=True, description='The country of the place'),
+    'description': fields.String(required=False, description='The country of the place'),
+
+    'dateIssued': fields.String(required=False, description='The country of the place'),
+    'startDate': fields.String(required=False, description='The country of the place'),
+    'endDate': fields.String(required=False, description='The country of the place'),
+    'date': fields.Nested(day,required=False, description='The country of the place'),
+
+    'facts': fields.List(fields.String,required=False, description='The country of the place'),
+    'keywords': fields.List(fields.String,required=False, description='The country of the place'),
+
+
+    'places': fields.List(fields.Nested(place),required=False, description='The country of the place'),
+    'region': fields.List(fields.Nested(region),required=False, description='The country of the place')
+
+
+})
+facts = api.model('Facts', {
+    'facts': fields.List(fields.Nested(fact))
 })
 
 @nspdf.route('/parse')
@@ -140,34 +204,6 @@ class PDFParse(Resource):
         else:
             api.abort(500, "Problem while parsing the PDF")
 
-
-@nspdf.route('/facts')
-class PDFFacts(Resource):
-    '''Parse PDF Document'''
-
-    @nspdf.doc('post_pdffacts')
-    #@nspdf.marshal_with(html)
-    @nspdf.expect(pdf_parser, validate=True)
-    def post(self):
-        '''Parse PDF Document'''
-
-        args = pdf_parser.parse_args()
-        uploaded_file = args['pdf']  # This is FileStorage instance
-        input_file = 'cache/pdf/' + str(uuid.uuid4()) + '.pdf'
-        if not os.path.exists(os.path.dirname(input_file)):
-            os.makedirs(os.path.dirname(input_file))
-
-        uploaded_file.save(input_file)
-
-        html = None
-        if os.path.isfile(input_file):
-            pdf = PDFDocument(input_file)
-            facts = pdf.facts()
-
-        if facts:
-            return facts
-        else:
-            api.abort(500, "Problem while parsing the PDF")
 
 
 @nspdf.route('/logical')
@@ -214,6 +250,37 @@ class PDFLogical(Resource):
 
         if html:
             return {'html': html}
+        else:
+            api.abort(500, "Problem while parsing the PDF")
+
+
+@nspdf.route('/facts')
+class PDFFacts(Resource):
+    '''Parse PDF Document'''
+
+    @nspdf.doc('post_pdf_facts')
+    @nspdf.marshal_with(facts)
+    @nspdf.expect(pdf_facts, validate=True)
+    def post(self):
+        '''Parse PDF Document'''
+
+        args = pdf_facts.parse_args()
+        uploaded_file = args['pdf']  # This is FileStorage instance
+        input_file = 'cache/pdf/' + str(uuid.uuid4()) + '.pdf'
+        if not os.path.exists(os.path.dirname(input_file)):
+            os.makedirs(os.path.dirname(input_file))
+        uploaded_file.save(input_file)
+
+        date=args['date'] if args['pdf']  else datetime.datetime.now().strftime ("%Y-%m-%d")
+        region=args['region'] if args['region']  else 'Alsace'
+
+        html = None
+        if os.path.isfile(input_file):
+            pdf = PDFDocument(input_file)
+            facts = pdf.facts(date=date,region=region)
+
+        if facts:
+            return facts
         else:
             api.abort(500, "Problem while parsing the PDF")
 

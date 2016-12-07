@@ -122,4 +122,7 @@ class TextUtils:
         new_text = re.sub("\s+", " ", new_text)
         new_text = new_text.strip()
 
+        if len(result) < 1:
+            result = [year+'-'+month+'-'+day]
+
         return (result, new_text)

@@ -93,5 +93,7 @@ ENV/
 
 treetagger
 treetagger/**/*
+treetagger-win
+treetagger-win/**/*
 cache
 cache/**/*
