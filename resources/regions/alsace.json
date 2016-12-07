@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Alsace, France",
+	"geometry": {
+		"location": {
+			"lat": 48.31817949999999,
+			"lon": 7.441624099999998
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 49.0778581,
+				"lon": 8.233549099999999
+			},
+			"southwest": {
+				"lat": 47.4202619,
+				"lon": 6.841025999999999
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "77d9127a96e648ad38afa35426dc4347c57db02c",
+	"name": "Alsace",
+	"photos": [{
+		"height": 2520,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/107378085516915051678/photos\"\u003eLiam Alexander Colman\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAPFvcdgJyHKqwiO1JX0WitT-mV6M3SpZ_cnBejZrPbjvrAaZAxjqKsUqKBoomjj8za7DCYoy_voQG9arctkjZQq_BQHlfqFnxYXhFC8CKtf_IaMiqT-Mk04vcgAEqzkw8kJwlPXQVaq0jWbirhsYY8pXXu62ouP7VY5EJtXEO6uGEhBQK6rl7sERTykK4fjIvnMzGhRshnNi5UURnSke01o_pkGlINsDiA",
+		"width": 4480
+	}],
+	"place_id": "ChIJv5Z326NGkUcR4CQ3mrlfCgE",
+	"reference": "CmRbAAAA05LOn2PNjSx-_ZpNOyjEv2ZTaAMKaiORebGlcUQtZWHC7bXfC3GzyMTcsdIUfeBvoR5H7186unQzplWhuEboLLnYpIf9BgNVQX5Dz9rS5pe3PtIzlgM6c0eNdPRiNgLNEhDF2lq4-qBG14SEZPSZuTuKGhQs2fqYpD8ttoQbpkVO2oFi3eszIg",
+	"types": ["colloquial_area",
+	"political"]
+}

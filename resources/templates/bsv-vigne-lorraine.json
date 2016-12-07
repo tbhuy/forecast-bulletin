@@ -1,0 +1,38 @@
+{
+  "exclude": [
+  ],
+  "fusion": [
+    {
+      "first": [
+         ".*?Bold; font-size:13px.*?"
+      ],
+      "second":[
+         ".*?Bold; font-size:10px.*?"
+      ]
+
+    }
+  ],
+  "levels": [
+    {
+      "selectors": [
+        ".*?Bold; font-size:13px.*?"
+      ],
+      "tag": "h1",
+      "level": 1
+    },
+    {
+      "selectors": [
+        ".*?Bold; font-size:10px.*?"
+      ],
+      "tag": "h2",
+      "level": 2
+    },
+    {
+      "selectors": [
+        ".*?"
+      ],
+      "tag": "p",
+      "level": null
+    }
+  ]
+}

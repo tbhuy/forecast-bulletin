@@ -1,0 +1,35 @@
+ {
+         "formatted_address" : "Lot, France",
+         "geometry" : {
+            "location" : {
+               "lat" : 44.53793579999999,
+               "lon" : 1.6760691
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.046684,
+                  "lon" : 2.2108909
+               },
+               "southwest" : {
+                  "lat" : 44.203348,
+                  "lon" : 0.981522
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "c570288cd58ef63aae55151a34c69148be11a618",
+         "name" : "Lot",
+         "photos" : [
+            {
+               "height" : 2848,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103604566120675195502/photos\"\u003eHenk Monster\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAEsA5M8d8bxgQysaxviY30_Wm1TDocq4v6XbHfUHdj0mKLRc9Pev6XG98sf6tp_aaBuNpo1ay4St6F5HPuwT9y02HRFT5eH6EGpe28-cBoyutLtDDxrL3vLTN9fbFHVBGligRGrTTEwYnyhvBQ66H91OYilePgS3I0L74hZi8LdFEhBclEqVNLdUiOf3zVucKK0rGhRq4CL8dnux_c5QMepMQ7NybxNcvA",
+               "width" : 4288
+            }
+         ],
+         "place_id" : "ChIJmVv63eLrrBIRYCg7L5z2BgM",
+         "reference" : "CnRoAAAAOqr02xaQbt8tCgBaf0HXqAiSgPWjiSOWLE_LMTL3Djer6M4glCDrS0uNvA_r8ePZWtPwTcWaQ9f-TTzdLYk6n0EBpGGzD3RZdOVhboYgA-zexqADhIpt6TJ0tfDgszX3lyodUNBjSSAAWRYBLThzvhIQ2nnn70Q2rM4qhv3aRN9lVxoUdU788rMlC7Urz4x8ioFsPNg2LXw",
+         "types" : [ "administrative_area_level_2", "political" ]
+      }

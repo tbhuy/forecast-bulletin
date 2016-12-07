@@ -1,0 +1,45 @@
+{
+  "exclude": [
+  ],
+  "fusion": [
+    {
+      "first": [
+         ".*?font-size:17px.*?"
+      ],
+      "second":[
+         ".*?font-size:16px.*?"
+      ]
+
+    }
+  ],
+  "levels": [
+    {
+      "selectors": [
+        ".*?Bold; font-size:16px.*?"
+      ],
+      "tag": "h1",
+      "level": 1
+    },
+    {
+      "selectors": [
+        ".*?font-size:17px.*?"
+      ],
+      "tag": "h2",
+      "level": 2
+    },
+    {
+      "selectors": [
+        ".*?font-size:15px.*?"
+      ],
+      "tag": "h3",
+      "level": 3
+    },
+    {
+      "selectors": [
+        ".*?"
+      ],
+      "tag": "p",
+      "level": null
+    }
+  ]
+}

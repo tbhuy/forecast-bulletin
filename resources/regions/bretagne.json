@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Bretagne, France",
+	"geometry": {
+		"location": {
+			"lat": 48.2020471,
+			"lon": -2.9326435
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 48.9008929,
+				"lon": -1.015621
+			},
+			"southwest": {
+				"lat": 47.2778629,
+				"lon": -5.1411729
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "c349f1c1fedd2d84a95e088396e492b839605e6e",
+	"name": "Bretagne",
+	"photos": [{
+		"height": 2988,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/114806938956904991434/photos\"\u003eVikki Latham\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAP7hyPF3Kijl1RgdcPPb542btrpAU8YVsS8s0kjbwnNPSLp2824L-TA9PGbNBvntByfA_SuFg50gSWiNFzMosoVIcI_bJi0L4lhXOsBtEuptBCeNsn1Zqvut1CB8bQKbwIPtNHtXp-t_oJAk2GK_cHBMD6YK9B6azwNM8B4pAoUWEhAs2GrQXKt3PjUUysESr0SYGhS67SkBjRzF93jJk5B7qSYnLtNJ-Q",
+		"width": 5312
+	}],
+	"place_id": "ChIJr45-rmHKEUgRsCTfNs2lDAE",
+	"reference": "CmRbAAAAx_bLd9QtKVkUhTWPINw_SVjdPh7vg4dWBaz1b3VjMJSIBiEMiNsgmsutR02hkKUIKd9l_CP2qDlVGyQ8_ZZdv1mTaLzZnxR86sODHMOVUjNdwOo1YCd79jksOhUAIY5uEhD-hn7cagwYJSUuoVX5ltroGhREZ_m0Pe66a2gM5RRX5865wu8ePw",
+	"types": ["administrative_area_level_1",
+	"political"]
+}

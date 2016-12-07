@@ -1,0 +1,28 @@
+{
+  "formatted_address": "Aveyron, France",
+  "geometry": {
+    "location": {
+      "lat": 44.2179747,
+      "lon": 2.6189273
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 44.941441,
+        "lon": 3.4517541
+      },
+      "southwest": {
+        "lat": 43.690619,
+        "lon": 1.839313
+      }
+    }
+  },
+  "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+  "id": "dfe8dc91faf42ce697103afa59e0cb4a915d040f",
+  "name": "Aveyron",
+  "place_id": "ChIJJxwIxhNjshIRMCY7L5z2BgM",
+  "reference": "CnRsAAAAxoREO_qFEviedJogu4MZ7F4FVykSvk2VtzOogHFH1eEp9dquvHR7SUP4-w65-EzEdiP2oxo6DAKiAIBnh19WE6du4B2r0Yng5gZgO_xENrtwMPxuARpltzYdZwoa7oGFUtbcPseva5nh5BTwLtA_mBIQhXvBxTDnavAbFRjzRqVeoRoUlRB8B82SYqACDsNLfZG2BqXkmdY",
+  "types": [
+    "administrative_area_level_2",
+    "political"
+  ]
+}

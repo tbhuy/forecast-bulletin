@@ -1,0 +1,25 @@
+{
+         "formatted_address" : "Gascogne, 69590, France",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.636849,
+               "lon" : 4.454704
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.6446502,
+                  "lon" : 4.4707114
+               },
+               "southwest" : {
+                  "lat" : 45.6290467,
+                  "lon" : 4.4386966
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "c15b3c90e7f8ccd6f94d555b0911bea04dd577bc",
+         "name" : "Gascogne",
+         "place_id" : "ChIJSSnQgxpX9EcRvcX5poQxVU0",
+         "reference" : "CoQBdAAAAINFDD9FekhvSI-Q92M8l8gr1bCCFkYmSF9AWnJi3xZ5K2Q8lTai_mQ6nY6bzhYdM-sTsop5OfskXAAG3LmKngr1NgrHhvGFRYpIwC2uQ9-XwKKk6tRmFhcluMDKdHUZ-MuCEkuFESx7QiFWdHw5T50W0NobgG9FlwgnFdECvPn8EhCW3G1fKf3l0Wd9Iso7_EkOGhR0a-qM51D5Y0o0mOPaNrbU3vtykQ",
+         "types" : [ "colloquial_area", "political" ]
+      }

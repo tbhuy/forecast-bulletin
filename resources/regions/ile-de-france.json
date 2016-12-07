@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Île-de-France, France",
+	"geometry": {
+		"location": {
+			"lat": 48.84991979999999,
+			"lon": 2.6370411
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 49.2415039,
+				"lon": 3.559007
+			},
+			"southwest": {
+				"lat": 48.120081,
+				"lon": 1.4461701
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "3204a856c7f66efb251b093e3cdb50684ec57014",
+	"name": "Île-de-France",
+	"photos": [{
+		"height": 2610,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/110665080032651210546/photos\"\u003eGerald Muriel\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAADMYRrXwUsi8t_9XUsVJMCw5JwGrgA4osY2SBfIZLq0P9VS1-xHvuOiOWSeFMv3KykTmg2_dLGrtYWkxC5nzkz-PKaG2WEDSAERAChzyEMVmcLe-nylrn-IjZKDjzc4q5RPxO0RShu7B1MS9DWLt6dwrngBimvfxNHe8lXAVVANEhAvuMhynheMvjTQ6R3gaDUXGhSTGiU3uMop7v7bkKaVDCicaErGoA",
+		"width": 4640
+	}],
+	"place_id": "ChIJF4ymA8Th5UcRcCWLaMOCCwE",
+	"reference": "CmRbAAAAnPWOG8yU3HBd-Zmanp4ToE_4AhbhReI79upX37dXCudlSqj2_7zCV6vdcda0jsjPl2dj4RtIejn3oTKErgezKwhttzheHY6LT7rsU3uFE0pZrZ3NMxSu0BDpWrgwCKcWEhA6_x5GmYoJUFR1CNVgGhAoGhSYqf-4VGL6dU6o2dksdpaSlSEOPQ",
+	"types": ["administrative_area_level_1",
+	"political"]
+}

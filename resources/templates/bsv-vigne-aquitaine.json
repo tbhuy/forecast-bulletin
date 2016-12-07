@@ -1,0 +1,34 @@
+{
+  "exclude": [
+  ],
+  "levels": [
+    {
+      "selectors": [
+        ".*?BoldMT; font-size:22px.*?"
+      ],
+      "tag": "h1",
+      "level": 1
+    },
+    {
+      "selectors": [
+        ".*?BoldMT; font-size:16px.*?"
+      ],
+      "tag": "h2",
+      "level": 2
+    },
+    {
+      "selectors": [
+        ".*?BoldMT; font-size:13px.*?"
+      ],
+      "tag": "h3",
+      "level": 3
+    },
+    {
+      "selectors": [
+        ".*?"
+      ],
+      "tag": "p",
+      "level": null
+    }
+  ]
+}

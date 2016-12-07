@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Languedoc-Roussillon, France",
+	"geometry": {
+		"location": {
+			"lat": 43.5912356,
+			"lon": 3.2583626
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 44.975761,
+				"lon": 4.845564
+			},
+			"southwest": {
+				"lat": 42.333014,
+				"lon": 1.688426
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "faa1019cd4252cac06b9c2fa1bcf46e4be021719",
+	"name": "Languedoc-Roussillon",
+	"photos": [{
+		"height": 3459,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/110380280241339298940/photos\"\u003eStephan Claes\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAEfXRtjZaSw4AKh0QOGhp6JWyY_xsG-HMn3LLhIF8FE9mzYKB8vHvRPyWC3fu57hk62hRu0EytZYGaqTJrnNVGcGUbzxIWz4Fw_LimzGD73_PmBPSpwHOnSNYJwRfxzx-rsH2FkPRU2O-2fT8gdsu-jyY-WVketr8J2_P_WhafycEhB84uexCVcfSyWXHpv37pPXGhTIUFHu7rlClWp8oDKQ8L4HRQ9scQ",
+		"width": 5173
+	}],
+	"place_id": "ChIJWcV6wLBksRIRQCRlFiGIBwE",
+	"reference": "CmRbAAAAQXBzxNgqLDhk_5g8bwCMFlAGXvanPYMzPmxMoODOOk_BbK1z4yc16bODfuFtCdAYdflvTWE8SGQxD00jWPp7X8mCG6voR-taoHUCMxam9Bu0cTu6Atw9OyW3ftlkU_h-EhDVIaepAPOobRNs7VpQaBYNGhS1cSSnSRoqeo7DRzUHgXfEhOAByw",
+	"types": ["colloquial_area",
+	"political"]
+}

@@ -1,0 +1,41 @@
+{
+  "exclude": [
+  ],
+  "fusion": [
+    {
+      "first": [
+         ".*?TrebuchetMS,Bold; font-size:61px.*?",
+         ".*?TrebuchetMS,Bold; font-size:62px.*?"
+      ],
+      "second":[
+         ".*?TrebuchetMS,Bold; font-size:13px.*?"
+      ]
+
+    }
+  ],
+  "levels": [
+    {
+      "selectors": [
+        ".*?TrebuchetMS,Bold; font-size:61px.*?",
+        ".*?TrebuchetMS,Bold; font-size:62px.*?",
+        ".*?TrebuchetMS,Bold; font-size:13px.*?"
+      ],
+      "tag": "h1",
+      "level": 1
+    },
+    {
+      "selectors": [
+        ".*?Helvetica-Bold; font-size:13px.*?"
+      ],
+      "tag": "h1",
+      "level": 2
+    },
+    {
+      "selectors": [
+        ".*?"
+      ],
+      "tag": "p",
+      "level": null
+    }
+  ]
+}

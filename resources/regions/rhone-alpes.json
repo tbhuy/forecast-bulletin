@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Rhone-Alpes, France",
+	"geometry": {
+		"location": {
+			"lat": 45.1695797,
+			"lon": 5.4502821
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 46.519953,
+				"lon": 7.1855661
+			},
+			"southwest": {
+				"lat": 44.115493,
+				"lon": 3.6889129
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "ac369562f12fe0672445faf48e2c9c81d161c3a6",
+	"name": "Rhone-Alpes",
+	"photos": [{
+		"height": 2322,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/105792193799758974073/photos\"\u003eGuillaume Bourneuf\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAGkElh7iETtk2i0gcC2qHgcAt97OTg_goP6XgOOn3uxYNEk0eypneZaTQyxd-Nhqc9ywipeHxA8r4bZR3uVCEGO84u25y5gaajrsEln0aYZNnmTWAgSN6_J0gUGFEaMJLXUgWGmY7MIjKctvEjXz7TkYL6x3O1WsH2qGzq5bgwXTEhCteuI0H5YRtP2HgOKWJagPGhRuixI9AE3ZkmM8GaHmqDbiGGwVnQ",
+		"width": 4128
+	}],
+	"place_id": "ChIJS_HI7dPZikcRua8Cids1k3c",
+	"reference": "CmRbAAAAXAnnS4DH8IhkMjJSMFzFuyIYFOfE_9X7TuiTqqxy4zAOPSk1Ia_WJgpL6MjDOKmS36n3ZLdS20e5IcbBN1khC9UDb0typ0A0_jslGke0OxdyU9A5YlqpQ-6vRzDK9fhcEhBPtwiApZp7HQPg2zuGnXolGhSduLVgXdk2nyfgrRCnvqGm_i5JwA",
+	"types": ["colloquial_area",
+	"political"]
+}

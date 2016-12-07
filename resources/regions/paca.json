@@ -1,0 +1,35 @@
+ {
+         "formatted_address" : "Provence-Alpes-Côte d'Azur, France",
+         "geometry" : {
+            "location" : {
+               "lat" : 43.9351691,
+               "lon" : 6.0679194
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.12685099999999,
+                  "lon" : 7.718992999999998
+               },
+               "southwest" : {
+                  "lat" : 42.982022,
+                  "lon" : 4.230207
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "1284a5ffa24b0122f17afb4cbfbf20ddfe2c7325",
+         "name" : "Provence-Alpes-Côte d'Azur",
+         "photos" : [
+            {
+               "height" : 2368,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101124912812229753018/photos\"\u003ePhilippe Coppin\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAAqzY54xkLNThj0M_0eGFxM80lhPCjJLEnc2_Osv4nnodckTzC8nZ6bXgUPPlePX7hFy8B5y8jVGUEwyfXVqmTln_lXk1-l5wAV2pk6PNMnE82e-sSj1XCsMAIpTEPofm9Yrm9Imv2hiPJvePGWqNv5KgoKMct8KU0JP9Jd3ZFpREhDSkHi-s44m59VLXeU4VCHWGhRMmXmEaPaQydICxGYIK7mA9KcTGg",
+               "width" : 4224
+            }
+         ],
+         "place_id" : "ChIJrVP5ihlothIRp9EWPSaQFrc",
+         "reference" : "CoQBgAAAAF4VmxONSuSLjHS2AtirJlpHIAN-6dQQGo04oNt-cSncmVlQO4-sD16bZE0t50QrU7ETb0i48FUT6SLkV0VkSN1b8NkzBbRaFQ46X3EtGBiNJWYEA9WNKpzNGFWOCEjYkj4OtnB2-KcBmSQNmZwg03DyD8uDrdeWm8DecBoF6a-cEhCRQ9F9xmBKMRc1PphO13XtGhTaSbOgbEJ0RmOrVPDgGN-RhRio0A",
+         "types" : [ "administrative_area_level_1", "political" ]
+      }

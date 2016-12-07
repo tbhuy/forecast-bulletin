@@ -1,0 +1,41 @@
+{
+  "exclude": [
+  ],
+  "levels": [
+    {
+      "selectors": [
+        ".*?font-size:59px.*?"
+      ],
+      "tag": "h1",
+      "level": 1
+    },
+    {
+      "selectors": [
+        ".*?font-size:46px.*?"
+      ],
+      "tag": "h2",
+      "level": 2
+    },
+    {
+      "selectors": [
+        ".*?font-size:31px.*?"
+      ],
+      "tag": "h3",
+      "level": 3
+    },
+    {
+      "selectors": [
+        ".*?font-size:15px.*?"
+      ],
+      "tag": "h3",
+      "level": 4
+    },
+    {
+      "selectors": [
+        ".*?"
+      ],
+      "tag": "p",
+      "level": null
+    }
+  ]
+}

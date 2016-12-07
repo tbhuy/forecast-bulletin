@@ -1,0 +1,20 @@
+{
+  "exclude": [
+  ],
+  "levels": [
+    {
+      "selectors": [
+        ".*?Bold; font-size:9px.*?"
+      ],
+      "tag": "h1",
+      "level": 1
+    },
+    {
+      "selectors": [
+        ".*?"
+      ],
+      "tag": "p",
+      "level": null
+    }
+  ]
+}

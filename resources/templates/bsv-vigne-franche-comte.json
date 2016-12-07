@@ -1,0 +1,30 @@
+{
+  "exclude": [
+  ],
+  "fusion": [
+  ],
+  "levels": [
+    {
+      "selectors": [
+        ".*?Bold; font-size:13px.*?",
+		".*?Bold; font-size:14px.*?"
+      ],
+      "tag": "h1",
+      "level": 1
+    },
+    {
+      "selectors": [
+        ".*?Bold; font-size:11px.*?"
+      ],
+      "tag": "h2",
+      "level": 2
+    },
+    {
+      "selectors": [
+        ".*?"
+      ],
+      "tag": "p",
+      "level": null
+    }
+  ]
+}

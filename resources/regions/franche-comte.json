@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Franche-Comté, France",
+	"geometry": {
+		"location": {
+			"lat": 47.1343207,
+			"lon": 6.0223016
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 48.024154,
+				"lon": 7.143381
+			},
+			"southwest": {
+				"lat": 46.260695,
+				"lon": 5.251316
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "f5b115891d19256e23b5a3e6803f70d9c8db0059",
+	"name": "Franche-Comté",
+	"photos": [{
+		"height": 2592,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/111148136704617601286/photos\"\u003eTS MJ\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAN_cQW6rUfxa2g-lRKJxp6DRaD3NEFWljVixY79j1UqrJFDWzap_SP1cYZzOy_wcNGQQ4jB-SwALAYulxCphdCGQ3MYMvjlfrfi_YTexK4o_HbrRNIOQZdhV8JDTtHLFx0lEq3Tc7ZKElP3NIPBKb40bqUFljyES534Q0qUEr1hXEhD-XV1HMu9YFRzEAZsSzIpWGhQOsd_okrbCGadKFyCfGyhoMfjUog",
+		"width": 3888
+	}],
+	"place_id": "ChIJJwKvjhhjjUcREV-uvEkQBec",
+	"reference": "CmRbAAAAWloLPbgr69RAWAL7E6PgnG3vEU2oCNUO8lIIXctsMCyIbMawc7pr3QRbkY8fGQhwm8U4Tj6EtaRQzur0qqZIXkWiZCr5QuIitxETPjFpdXUiVX46lVT55h3n0tYdnp01EhAzMGP9F7ODJTjk0O_Yv77iGhSuqMPiU14Msyvvz8I3VaXI0C5M1A",
+	"types": ["colloquial_area",
+	"political"]
+}

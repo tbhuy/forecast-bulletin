@@ -1,0 +1,35 @@
+ {
+         "formatted_address" : "Orléans, France",
+         "geometry" : {
+            "location" : {
+               "lat" : 47.902964,
+               "lon" : 1.909251
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 47.9335359,
+                  "lon" : 1.948677
+               },
+               "southwest" : {
+                  "lat" : 47.813296,
+                  "lon" : 1.8757401
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "a9a9dfe24db956c473489fcc4f44184e96df1cdd",
+         "name" : "Orléans",
+         "photos" : [
+            {
+               "height" : 1365,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106102026083836781438/photos\"\u003eAlain Boulanger\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAAE1u2_lQPAnRj7EsqsDSp_x8Zj3UUA_0AQ-n9ZZewd1eX-CSLIdewVEUNeN-yZj863w8s8l2gcKiFOeRzdujkOqkraZ1cztpLK_QtJtB1SHxRJEl26gRrZP_5zfVfOLbqnQ0vBgh6B-fZfQu5YhZR2UvXkHenIPZYZK8hkm-T3XbEhBqXQporOY5JrDThrtJUSdSGhR3PN2nacrS0W1kxeBobpo9Z0vgiQ",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJ44bzndTk5EcRKYDDeeR9uZ4",
+         "reference" : "CnRtAAAAvSFqXquq1gqnnEaWl4_xYFAwZuPerDATHjaa876LR_Caidsle9SHyqMJmAJ4oQeWHpkZ9RKOnJcw8FOXHcM10c_zLi6vO1SFEsOWusyHawz81XJj2X449gJdJcRgc8gxGlMD7nVWUNDCwoV1QP1pdRIQKp5wkc72DNYi9eK6XW2YcxoU9cvbtgGd3NzHTqPciokRn1naXBk",
+         "types" : [ "locality", "political" ]
+      }

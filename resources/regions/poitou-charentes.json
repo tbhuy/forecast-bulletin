@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Poitou-Charentes, France",
+	"geometry": {
+		"location": {
+			"lat": 45.903552,
+			"lon": -0.3091837
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 47.17599,
+				"lon": 1.21323
+			},
+			"southwest": {
+				"lat": 45.0887499,
+				"lon": -1.5626689
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "ae127d7f3dcd147964bcd0a45144008cb44a28bf",
+	"name": "Poitou-Charentes",
+	"photos": [{
+		"height": 1836,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/114476796651909818247/photos\"\u003elaure féménias\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAIaU5GIBkZhmFQ-Emlreeo-VK14-75WP66s_o5s81sZxjsufVRqe7s5h-KQSZBWBl5yIQzOtnQp1qnQeKCUKrI6Tnku7jOJ-US9qSh8XLQnADXdMM5lcIdz26aKRzgz31aX9n8nmOPsv0BqYm35eRBfb8ZwuIeS09NnvsGm87fGREhAXTXitkK44n2Mp8g4LOmVAGhSWY2VLfhwx55KlCB4GKw-Irish1w",
+		"width": 3264
+	}],
+	"place_id": "ChIJbRILoIqxAEgRoCTnYJLTBQE",
+	"reference": "CmRbAAAAdF-SlW4jeBHUOVHHGkvJ-iDrID-daK0-k5EubCXpwAYkkCubZHKJI_waaqlS4YX7Qi2pkzOS4zUqmbplTRii62JAuf_AwEnAXm1q99-zsC5JxOveRd3atITSGEfC6j9jEhCo2PpCd6sCUepgwyTE8mL4GhSl-d9BiGBYcSp-xCB5GS3NDdrtUA",
+	"types": ["colloquial_area",
+	"political"]
+}

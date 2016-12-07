@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Picardie, France",
+	"geometry": {
+		"location": {
+			"lat": 49.66361269999999,
+			"lon": 2.5280732
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 50.3663219,
+				"lon": 4.255678899999999
+			},
+			"southwest": {
+				"lat": 48.837212,
+				"lon": 1.379657
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "32b331f75b0ec39b4178b8ef903cd98f6159b236",
+	"name": "Picardie",
+	"photos": [{
+		"height": 2160,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/113656105922332203454/photos\"\u003eAna Salvador\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAH1nd_JjRCZdU6r6CHs9TInYYgRvndiYxijEwmVwca1rhStpacAahV_bv4CsCn_KpyrO4dkHcmRFg2LoSvVUUESLKm0pyKwpiJJFHD5XzcIMAVsINryGCv_gMUh-dwh6W_FHOK69IrePSsWqZX1FG94B9UKciOWPrsFdq3uE1hwMEhCNuHIXzn0_StL4E4kCm36DGhRSblJe3hsBoY8SNNsRjooUWh2v2Q",
+		"width": 3840
+	}],
+	"place_id": "ChIJL9Lah0CE50cRbrAvKEy_vg0",
+	"reference": "CmRbAAAAHFVB9qp4z2jvp3EelOIX4Rh6VlVlN4H1R6OUmKwgXXdwZDTOUBpYrJJdZasiLQlwdEvIegSo8Xt8cRwNo4d9d0VNBklK5OTP3KhRHfKSGRrvoASxXKuMpEsHCICFAJiZEhDeGeLRuUAfYgoA0DwGUqloGhQtTTOx_VcKPlWLqt45_pR7xGMFsg",
+	"types": ["colloquial_area",
+	"political"]
+}

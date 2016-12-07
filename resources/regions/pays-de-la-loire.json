@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Pays de la Loire, France",
+	"geometry": {
+		"location": {
+			"lat": 47.7632836,
+			"lon": -0.3299687
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 48.5679849,
+				"lon": 0.916639
+			},
+			"southwest": {
+				"lat": 46.26653899999999,
+				"lon": -2.5596039
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "1d8cedeb11dc1884512a2ff3a4bb8c318a9f8394",
+	"name": "Pays de la Loire",
+	"photos": [{
+		"height": 1365,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/106102026083836781438/photos\"\u003eAlain Boulanger\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAABXQgtViitFta-pnCrKHTf46T_11NSPTbQHAqRCFrHzrEL4ShNrxkg11MPzo3QaJiW1wrYAE01wCl98jd6q3ne6aT8nn6s0hktyOm27C6_XOknunmqvuXAz1pdKAZqWHOjFAeaSJoIC3ErQNeBE6sJxjtLqvejodxOhGfXx2F51sEhCbB4QFa7pqP1OCUvrFidobGhTgwDX-pbxER97ma6ccfTye0dEPjQ",
+		"width": 2048
+	}],
+	"place_id": "ChIJQQUJqjgXBUgRtkcc2Asrls8",
+	"reference": "CmRbAAAABSs1s7LvRJyxNttcppIAN4BGXlcR0KoEmY5dthR7Yi08MmxBFMO-GyuCkrHYpulbAehqWlDzhyPt40Bp4pT2vCJNUaqvN2PpyHLSATYGJOxXgSfWjzXFIe-6ht6rxqaiEhA4n3SE3MG5aD6eVXJs_2LyGhT44OrRySzLICmfNScpvYQ1KNpCmQ",
+	"types": ["administrative_area_level_1",
+	"political"]
+}

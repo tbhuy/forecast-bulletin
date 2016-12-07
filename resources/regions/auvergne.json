@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Basse-Normandie, France",
+	"geometry": {
+		"location": {
+			"lat": 48.87884719999999,
+			"lon": -0.5157492
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 49.727762,
+				"lon": 0.976575
+			},
+			"southwest": {
+				"lat": 48.1798839,
+				"lon": -1.954995
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "daaf9454059968711714243a4d3a7bf2d6830153",
+	"name": "Basse-Normandie",
+	"photos": [{
+		"height": 2988,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/114741980559193083853/photos\"\u003eMike McCabe\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAPHXvyz-o3_kqutV1txjiyEIEu7WvFqHc83lNhBVBoxd8kCR1Fr-ilavEjWtdFHrSciHwwNUtRP8CvQ6UpR3kSJ1_2wTBTeil5MRxlm-9c_4BUZ-35ufpbdZ4Cz9MoDRnleZ5rK3ujO7JlnUyXonbucsgwdDPe2CtA7mfoChCMbjEhCi4HC0HSX7ss3S3Q0GFD8zGhR-tu8haldo5siEZn_pPjWl-plaAg",
+		"width": 5312
+	}],
+	"place_id": "ChIJu46ajCY6CkgRICW1T0gUDAE",
+	"reference": "CmRbAAAA12fWZ5QKF9Y-M93HmIPyWHrtlzdoVJu6gE8un3egBE32QqgpDdEpLG4T4rzD55bgMv5yRQeO-_BonBbpZn7WVQbOKKpGKhAAJCRVpdfjnMzCEnEC95gWm7fd0xPDjm8nEhApKQJvXC4WAt7SrEsSAbx5GhR0HTMOYUnjxdIIqLeae5ezWgIuXg",
+	"types": ["colloquial_area",
+	"political"]
+}

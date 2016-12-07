@@ -1,0 +1,28 @@
+{
+  "formatted_address": "81600 Gaillac, France",
+  "geometry": {
+    "location": {
+      "lat": 43.9018159,
+      "lon": 1.896506
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 43.9574329,
+        "lon": 1.943156
+      },
+      "southwest": {
+        "lat": 43.86633399999999,
+        "lon": 1.836364
+      }
+    }
+  },
+  "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+  "id": "51b25ed4b90e88d3abdd606961d44d0f11ace318",
+  "name": "Gaillac",
+  "place_id": "ChIJQywzhyPSrRIRk0vYQxxp4us",
+  "reference": "CoQBcgAAAB2Zwe2273IN7KBO_UF_BBUTTeA4wci4kwXQO1AYXzLkPVZaPbzGbGUq1Cw8b-L95OjPVXNvc2SbEf027IgRvbh7z_GE-3nxgsdMWV3AkQkKXAkpnWHXXWq76rckKhCV4tgSn3N0XUeNUDcGuwd92_FzVbiCO3KRACt_9yqsenq-EhBGVFEcUzM6-5XjlFZtei6xGhTTauHk0OdCfSaTSfKIhE2dqfPsTg",
+  "types": [
+    "locality",
+    "political"
+  ]
+}

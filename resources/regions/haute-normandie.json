@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Haute-Normandie, France",
+	"geometry": {
+		"location": {
+			"lat": 49.524641,
+			"lon": 0.8828329
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 50.072097,
+				"lon": 1.8031111
+			},
+			"southwest": {
+				"lat": 48.666427,
+				"lon": 0.0655719
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "9fe45133ba0d0db9bdfa7bae3cd353fb1a3e2a3f",
+	"name": "Haute-Normandie",
+	"photos": [{
+		"height": 2988,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/115460077408582733681/photos\"\u003eTristan Laurent\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAADIyYTF70AfTCUifOLV75WnmW9B0RHyeZLZer0rICO7T7rHcZ4SWVC-MhaYFa5x0vBvuR3kolSNTezY3Zo_8nkPEVeiZ6f-UCP4NaWCt1SIY5r3YcFOEa14u-3qWTIm8j2tyxyJLI0e3Hg19nxV5C42abJYZ2qNycPYc8X17Jvu_EhBILNTJQuYOC9Bt1XdfruuyGhS2JXRTf8H-5GSujuiluoWwmn8HOw",
+		"width": 5312
+	}],
+	"place_id": "ChIJfYshlSMv4EcRRVdFNfaAXnA",
+	"reference": "CmRbAAAAudl_6kQOl5xXSt4tzBrFDjFZNppZIHzd6o-FBudtYsnkzQ18GK1zGyTLiVlz-hkFKo9eXaS2N6FP3WLrQPvtfnefv1rYuF1lpgNQRU7jR5_oPZOxESfMrJUKr2WjNHzMEhD_bmRrrALQoovRR6WXP_51GhTHqzhHF5KikgkIfqoJfo_9qaK0hg",
+	"types": ["colloquial_area",
+	"political"]
+}

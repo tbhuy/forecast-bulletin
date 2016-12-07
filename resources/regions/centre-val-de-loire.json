@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Centre-Val de Loire, France",
+	"geometry": {
+		"location": {
+			"lat": 47.75156859999999,
+			"lon": 1.6750631
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 48.941029,
+				"lon": 3.12841
+			},
+			"southwest": {
+				"lat": 46.3469059,
+				"lon": 0.052737
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "c678bc19f99523bb0f029e4a9355336ca5977287",
+	"name": "Centre-Val de Loire",
+	"photos": [{
+		"height": 1501,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/108832422337600679597/photos\"\u003eCédric Verdure\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAFyYtxyYJdHX6F5eE0axZ7ZcE7AVTyf4109u2eCWFfTn174zaOPuoFqgik9z1_tlJS7ndjvLdQcDIg0gOCxS3A2QsDJm1zWo6-fYahCaWr6P6DfBOzaaJo-SOPQoaLw-awIeePWLaeH3AOerPdnt_nZ9QH-N-PmavSq0Pci2uidAEhAhqWm54CevdCh26ptCmGUCGhTD_1l1-ieCscrMWx8u5Ot2tScNaQ",
+		"width": 2502
+	}],
+	"place_id": "ChIJiV0INnu55EcRMCUzBdfIDQE",
+	"reference": "CmRbAAAA0WEv3dyj5eMhni3lLVHPnqs4ZFTONTWAZH35q3fD9-3Sv9KailR3_O_L-yGzZX1DYJHrkbeOYRSZFUt2Vv6kFo9mvytlmusBnzphx9_zvlI0UPRDFREf2Y5GsKzt7JDgEhDj3-BuL4kDXvoqlfY0ZZQxGhRD20sHaUUt1yEU_K4_5ugI237HyA",
+	"types": ["administrative_area_level_1",
+	"political"]
+}

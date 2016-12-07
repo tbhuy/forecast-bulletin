@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Limousin, France",
+	"geometry": {
+		"location": {
+			"lat": 45.89322310000001,
+			"lon": 1.5696018
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 46.45536999999999,
+				"lon": 2.6112931
+			},
+			"southwest": {
+				"lat": 44.92029309999999,
+				"lon": 0.62925
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "5e9a2315450d30d84c5cfa0d46551641201fa9de",
+	"name": "Limousin",
+	"photos": [{
+		"height": 1756,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/114804408558506101256/photos\"\u003eCyril Mistrorigo\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAK7OJzTsqcIJ98hD8Eb-k4vaG7hCCQMzWRH8bRrNM5h1vgZqz7kCRrtSd4L054DI6LN2G0MXUUOWs_9ENhyO5Y9i5LxfusfLCAzhUmPlomtwbViMxD-cCGGrvzumpCjqBPih2KQ5-BkYDrCOYThaIyPfAJEs--Qik97h0eqEKTyvEhAj8QLhCM_6j6qcrf4nuffEGhS2SmPDZOFpmGZeNxvQwm1N-Gd5qQ",
+		"width": 3756
+	}],
+	"place_id": "ChIJ9Qt-IC4Q-UcRbgZJ0DHNvJI",
+	"reference": "CmRbAAAA4VyVN-hXTUjxjF-xBOJVMtPnRz-fgGxweecg3VDmfdEx4X03m_04R0tKzm57pilq0-yD0TTaMGkoaC1fGrxuOuVSAKD0VG1731afrhku4_YL1T1qoz4QLbx8avA-NSGtEhA54xPfv6aazq4uchzTMD-GGhSooNd4ZPay1Gsrvgaz9bBFt4Ze3g",
+	"types": ["colloquial_area",
+	"political"]
+}

@@ -1,0 +1,35 @@
+{
+         "formatted_address" : "Charente, France",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.7519958,
+               "lon" : 0.1534761
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 46.1408509,
+                  "lon" : 0.9471240999999999
+               },
+               "southwest" : {
+                  "lat" : 45.1916819,
+                  "lon" : -0.4631029
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "24991099a8c15e26f72b36c0660427dc78f619e0",
+         "name" : "Charente",
+         "photos" : [
+            {
+               "height" : 1440,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103200691105105581161/photos\"\u003eSylvie BRUNO\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAADBxRwWdy9B2hoPQqD244oWfBaPeUM7FVOA1IghFrFFnLT2hCO8FxDh8XW1mDBw0Dw0cC5M7scWsPSxBEkFNvJNDuVry1hu7fHdbiUH5DurhTfYAw2n7lEY-PlaxItKe8XPzsG4fHOO0mS3hoQLwrSnWkiFgbVLpG_EsDtMMEHwcEhBcMlL7j_sTBfjcBrn9ioF0GhSI5sQEpxw7hwN8S0yVFP4x1mh-hg",
+               "width" : 2560
+            }
+         ],
+         "place_id" : "ChIJObJ5-RA0_kcRcCbnYJLTBQM",
+         "reference" : "CnRtAAAAyvj8wvyk2aYzqv1DWdx45txOTo_lEVShGDByPHqtJqRcM3tkGqC_HjXsvNISvz1BaYEAycjYrThtbBdwph2xUnckRDBSYKVGFm1EqsIVrELU8T5_16AcRNdxywOKJnWMiIo3dfm9IA6OOPFge0AsShIQ7-i4AzQY42LN_8Ht2RiuhRoUdrSDmZh6rOs7pUblifn3hKTJ46o",
+         "types" : [ "administrative_area_level_2", "political" ]
+      }

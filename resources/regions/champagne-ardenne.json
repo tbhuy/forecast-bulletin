@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Champagne-Ardenne, France",
+	"geometry": {
+		"location": {
+			"lat": 48.7934092,
+			"lon": 4.4725249
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 50.169162,
+				"lon": 5.891043
+			},
+			"southwest": {
+				"lat": 47.576566,
+				"lon": 3.3836479
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "f0106a7d54fee49503190810aa2e6cacef777568",
+	"name": "Champagne-Ardenne",
+	"photos": [{
+		"height": 2988,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/112619532859680869611/photos\"\u003eALEXANDRE RICART\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAHC6HPlJxgEp7R4y2JsUQXG0XZGOSgnCk4Q9qHQr6Yh6-PB_mpXQyNpv-KiG3MBcrjkMpwCQVusT6tuUZtE8IET6trDF583dPqdw4udIOlDWR3tY3hU8RVkuKAGryVcjTCcvrZAcGPF88gk3ExiWx8tebDvwlhqm2EFJBWjhUlloEhBVPhT58XJSAOz53ZiDodE1GhSpdH4BPv7L7cyh3tWuAK2hzV7GhQ",
+		"width": 5312
+	}],
+	"place_id": "ChIJXad-Rv906UcRPauSZXj2v5o",
+	"reference": "CmRbAAAAUe4rFb-8Tl81BGMrVh2ajjluspxdsfohlZIgbABqwKScBxgJ9QcJ0H1wyjNRWNXerjDSOkIFd_SEFiaiAlLKDrxcMVY_BE9TkV7IVCm5wTz_aZHZ6t5RJOFIXDjTvAyKEhA7URXNugQFtnvZR_b4EZ4PGhTNd9WuK2I7k192FnVn74uFxhiXSw",
+	"types": ["colloquial_area",
+	"political"]
+}

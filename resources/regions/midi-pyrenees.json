@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Midi-Pyrénées, France",
+	"geometry": {
+		"location": {
+			"lat": 44.0859426,
+			"lon": 1.5208624
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 45.046684,
+				"lon": 3.4517541
+			},
+			"southwest": {
+				"lat": 42.571489,
+				"lon": -0.327159
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "bb5fac6742e05df0084669532ac8ba4be9e78ec9",
+	"name": "Midi-Pyrénées",
+	"photos": [{
+		"height": 1772,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/100839870610335564306/photos\"\u003eJARNO Christian\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAD_jyZEpzSudc81E-8ZwSFnlq_yqCWb_3Gpc9fBMXYFadMwH5PkqISlpRTNcoaqzEP0VfcHtme-TkDybyqXSLgRk0YfS3SkdGhmWCipFRNmjgzlc6M2Y869GLcqzCu0_Md6oFBAmaBJcBkH4FoKVEvxabvZReAx3OmBLTCCTGo1IEhD6c5XbPFSxUJuT0zMdYnAfGhQEXqLVyS9hWNBISyfW1fdjlAb43g",
+		"width": 1772
+	}],
+	"place_id": "ChIJi5Fh1PkgrBIRgCQ7L5z2BgE",
+	"reference": "CmRbAAAAcDrdQDrcEDTlx0RonqnA6oVGTCeit9VS9YOnmiMj0gWYwfbV1GOBtoQ3P3JGJ8vHMTT-e4MYphelvgm5oO2dP5vtZjQydgNW6MGtGzvPyjNqno2kPRhTlUVlEjFAr6c5EhBxUttDYZCIjM6toZfhjye_GhRjVI840lPT_8jOtDhWecFcWuQHwQ",
+	"types": ["colloquial_area",
+	"political"]
+}

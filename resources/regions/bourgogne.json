@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Bourgogne, France",
+	"geometry": {
+		"location": {
+			"lat": 47.0525047,
+			"lon": 4.3837215
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 48.400061,
+				"lon": 5.518767
+			},
+			"southwest": {
+				"lat": 46.15607,
+				"lon": 2.8448909
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "65ec21b976ad723dbba6ba14a10af767b5dc6efa",
+	"name": "Bourgogne",
+	"photos": [{
+		"height": 1365,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/106102026083836781438/photos\"\u003eAlain Boulanger\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAFfC3lYCH7CPUgTFX-iYQfRV4vr5p1ZuQ4ojJZ2sukcBxz9Zu7zsTTYYSyBK38r6XCSr6myVVY3QgsQSEbMwzOaZ5K40cKk4OhANzDWvZr4m6OU3IckgjW3U-5O2YL_1v-jJ4fN8bAYI70G25Boks_HrcyMq-O0NdV6ibVs50GwBEhBcnGKeNLAbX1zHmaljSiXSGhQW4JG_TLBTXKk38ouwsP-2uMJqAA",
+		"width": 2048
+	}],
+	"place_id": "ChIJt9nzCDkE8kcRECUNszTOCQE",
+	"reference": "CmRbAAAANB_g983FmzYsOrcSyNBkwRR4QKlZx3WRZIhg3xukzq0xl7cldmk1euZndcVSiLymzr3WPbrFvnzgDOOqsiqoLD8Ae5pMkE37g50Z-WOBRl448_gw3f9gEpB7tGeeinx5EhA19Gjf9stRpLZtQ_TbJUiQGhTQa_lFL1xKYl8XcriGLMRx8Qi7HA",
+	"types": ["colloquial_area",
+	"political"]
+}

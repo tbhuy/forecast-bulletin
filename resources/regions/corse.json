@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Corse, France",
+	"geometry": {
+		"location": {
+			"lat": 42.03960420000001,
+			"lon": 9.012892599999999
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 43.0276249,
+				"lon": 9.560067700000001
+			},
+			"southwest": {
+				"lat": 41.3335579,
+				"lon": 8.5398991
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "56a6fcac0e523b098421527bdec4bb03be5ed23b",
+	"name": "Corse",
+	"photos": [{
+		"height": 768,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/103140901190329502054/photos\"\u003eAlex CA\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAACjaxIzZvjY0T7b8bJYU3V-x7LuQf4LQfMKRD5ML4gFhgayJx9UmamfEd21zozb3ZsR_KeER19SZRWgc16B-ZvzLk6yFEAtQOn5q56U-SkJ1ptf_eosBNXYUqYnTxxU8pUIb3DJNUpNbEzQfw21nppu631TpYjWnBriFzOSlkC-nEhCRj4AFPTrCoCy3BwtdDkUvGhTOuKte9fdYhQ6GQ_q3B1ZqtTJFTQ",
+		"width": 1024
+	}],
+	"place_id": "ChIJcQmbsAMk1xIRjcuhcewihag",
+	"reference": "CmRbAAAA_u2XIwttr7qRQVcSkkgomUba7mYNuIWke4wChQS4BkIPXq_5EXYQww-BEAiMcjb1RcJDqc1ccP-0YtW5c05HCpOucS9Bi5GtY53SlBIZXI7bDaLS0oTnLJ7_FVke7Uu8EhB_uTNQ35DkLxduRyOCQkUUGhQ66Ju957pTgnAj92caGH_ZEEKeJw",
+	"types": ["administrative_area_level_1",
+	"political"]
+}

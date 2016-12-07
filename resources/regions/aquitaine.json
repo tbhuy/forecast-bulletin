@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Aquitaine, France",
+	"geometry": {
+		"location": {
+			"lat": 44.7002222,
+			"lon": -0.2995785
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 45.7147689,
+				"lon": 1.448245
+			},
+			"southwest": {
+				"lat": 42.777531,
+				"lon": -1.7923251
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "af047bb8fbf6187e5046b901898b33ba07efc6d2",
+	"name": "Aquitaine",
+	"photos": [{
+		"height": 1536,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/107258995316670155818/photos\"\u003eEvelyne Tricot\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAALynGLfMkwwKOtnbEC7FOL2lQM_la-9q7ZzEjtwbw77InCqJrw9crbgcSj3YrIEEU1GkG-wU_oTRIv6UwBG3s_2Vgrdoi25-XRO5AJT2ysA-LHHvh8j9BIoSAaSptoBpRSsyKNXZzslyIz2UJF9BndfLnJY-awTqM0usgvraom1REhCpzQbBK4Guk9iBNYTBs744GhRbP8EAU_wHL_jYoentDxC8tGMSdw",
+		"width": 2560
+	}],
+	"place_id": "ChIJXUV5MymgVA0RCYiUCcIMmcI",
+	"reference": "CmRbAAAA-ZsLN12XsqC5wAE-6KdRlyucUAZJK7_wAtg8zRnDjl9lmrLJO-BNzEw14NQ7DZpSUGMLSQ6yNTo1NCL4KZr42umGKbWcOSLQHQJetYC59zGXD1mKYPQFqpOQkK2cNSAXEhA-_epupuc6PAxsyHh8SEOrGhSnlmXvIMt8-r2btp_SXN9grYXJaQ",
+	"types": ["colloquial_area",
+	"political"]
+}

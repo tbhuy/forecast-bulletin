@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Lorraine, France",
+	"geometry": {
+		"location": {
+			"lat": 48.8744233,
+			"lon": 6.208093199999999
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 49.616864,
+				"lon": 7.640047
+			},
+			"southwest": {
+				"lat": 47.8132981,
+				"lon": 4.8883769
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "4464f5818056920d24d3236cc3904829c065c740",
+	"name": "Lorraine",
+	"photos": [{
+		"height": 2673,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/113552928139700008572/photos\"\u003eChristian Maurer\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAMbOMBRZkzvi9KYunURJU8KCM7WEu3cyV-ATuOwJtGEXLeo5d7tTgaCPsj1lSCkWkw-u_snHD8vfk6qrKCLGksBcxqUNgndygc7DH2U8dmMojKjqw048gQ7M9_yJXvmRC5JfP5JVS33jR_CZhKGUIO4-qYn_pxHrWTWRO9VoV5T4EhCiimPugW4fqRUeWE0BMjNBGhS8aHWC8Byn93LwcEFl-HeYPkou5A",
+		"width": 4009
+	}],
+	"place_id": "ChIJ1ZAR_lOXlEcR8CQ3mrlfCgE",
+	"reference": "CmRbAAAAzwLV9UDB6gcPTq8QCtsKnIDut8bW5jYSI2ScOdGBpwulO6va9GBgi5lErJEQauIBuqNqP6qRiipTfukhcQMKIROfnBaWHqwazf_F5RbDaTa7LUY-4GUqFYNVch98bZWTEhCJmSgfea1Xk2xQrUhL4y2DGhSXJmltjznbdWAS-gy8DsmRQt5jfA",
+	"types": ["colloquial_area",
+	"political"]
+}

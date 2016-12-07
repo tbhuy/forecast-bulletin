@@ -1,0 +1,28 @@
+{
+  "formatted_address": "Tarn-et-Garonne, France",
+  "geometry": {
+    "location": {
+      "lat": 44.01266789999999,
+      "lon": 1.2891036
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 44.39392489999999,
+        "lon": 2.000898
+      },
+      "southwest": {
+        "lat": 43.7675901,
+        "lon": 0.7378110999999999
+      }
+    }
+  },
+  "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+  "id": "21040f69ea5ae2aea41522b1415ab9b60d54fbe4",
+  "name": "Tarn-et-Garonne",
+  "place_id": "ChIJH-CzrKkSrBIRoCo7L5z2BgM",
+  "reference": "CoQBdAAAACVzg4Vk9jT3HiN9w6uVjru3-SnhyhF872lGIVMeo8ONw7FoZGfcJtObNiqDGUPNGmD4h83NMMjxUZ6EX6ssokBalVk_xTarJDkYOFkzLIA_nHHi_DmkMOYKukhz8PBJwnK1dLDQ-MUTge7xysF3mc6rxwl9bGCCpNTKpBhH3BfQEhBlAG559yIvc4I2plyXZNsEGhQ7snX8fzoG-dKUOB1nM1vvX6YcfQ",
+  "types": [
+    "administrative_area_level_2",
+    "political"
+  ]
+}

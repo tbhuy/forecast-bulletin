@@ -1,0 +1,32 @@
+{
+	"formatted_address": "Calais, France",
+	"geometry": {
+		"location": {
+			"lat": 50.95129000000001,
+			"lon": 1.858686
+		},
+		"viewport": {
+			"northeast": {
+				"lat": 50.9818821,
+				"lon": 1.9320691
+			},
+			"southwest": {
+				"lat": 50.921889,
+				"lon": 1.8058431
+			}
+		}
+	},
+	"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+	"id": "48358c1905c777bb3c9052abca20e2503fad6bd8",
+	"name": "Calais",
+	"photos": [{
+		"height": 1152,
+		"html_attributions": ["\u003ca href=\"https://maps.google.com/maps/contrib/116453589382772393054/photos\"\u003eRene A\u003c/a\u003e"],
+		"photo_reference": "CoQBdwAAAD8M45SmheH-kDjCj1cIR_qAWaBp0qvQGK_Qx0k5fx1WNG-07_jUCE5etcCYkjyA_sejNIOLltL0LiEL7VziqClzcI5i5kcOPVvlmVJrJvk7a2AvoFOHu3VSqufKRTtDazjgj-XFeL9tB7U5MN_TfLs0nVBOd4gTnga3FyaRVCyIEhDjnNyUfS6icmel0-xobilxGhQ8eS98v4CT6rSgQEFrJQscEDyXqA",
+		"width": 2048
+	}],
+	"place_id": "ChIJY-Px13U_3EcR9HnSjODZvqw",
+	"reference": "CmRbAAAAHDzBPTJN6LimhipY7qU7KfzH0TVw7yHxtTt8LOL9ugem-waw_WxJr-N7-p2b_l2u9r0XN8fWZNrLWbpPg7fOYJ8Wp_-u9oQ1gfoHBMPKgTipsrGOozls4tZ5aVerDGqBEhBQ9RZk5KQetbMOUOASzSDsGhRrp_yehCVy_UAF5NjSpdL-6FhVoQ",
+	"types": ["locality",
+	"political"]
+}

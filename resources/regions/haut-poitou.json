@@ -1,0 +1,35 @@
+ {
+         "formatted_address" : "Deux-Sèvres, France",
+         "geometry" : {
+            "location" : {
+               "lat" : 46.5926541,
+               "lon" : -0.3962844
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 47.1085489,
+                  "lon" : 0.2204051
+               },
+               "southwest" : {
+                  "lat" : 45.96966889999999,
+                  "lon" : -0.9036799
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "acb87ce60f6a1860bdfb5e2930179ce8f0e783bb",
+         "name" : "Deux-Sèvres",
+         "photos" : [
+            {
+               "height" : 2295,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101566755214434180680/photos\"\u003estephan perpoil\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAIeeWUjn4ydBb-aJnohPVwNCan1hUgg0FwPRsOSE8r-9Usnv2a7-9QW6OOdn859zysb6NhnMwjCpQG6rQ53kId8fO82vcPuyHU8JBfU2LPsJ-3I9V-7TM5ou3VfY5MdlGyh6547ELij5BZthqeirLoOaniKROXUINkrN_xx3q5xxEhBpIAuOHxIttHNx0EEaU4OIGhRrfYbIsusxkhJ5edcMqwkiZT7LmQ",
+               "width" : 4069
+            }
+         ],
+         "place_id" : "ChIJg2aT8BMVB0gRcCrnYJLTBQM",
+         "reference" : "CoQBcQAAADPHZgKBA8KIphjnbqF_1kp4sA0xFAPqOxRkoCFmEc0wVhfRSQWf_4dPuhHN5XtAtKvmmoZBStqf2BRftIIHGYV3k3NRVDfNHhFWSbe0e5zWQHrS0hvP3rGSn5IReeK-cnYvCVNCIwbmi-PbEQLfSbMK-ZgZ1-kTpgwrL8nFBcI6EhBkiTxdMOxHR0slRRszwYHWGhTfDY0OZOaBVrChWbp9nXlButQ8HQ",
+         "types" : [ "administrative_area_level_2", "political" ]
+      }

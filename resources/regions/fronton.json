@@ -1,0 +1,28 @@
+{
+  "formatted_address": "31620 Fronton, France",
+  "geometry": {
+    "location": {
+      "lat": 43.840098,
+      "lon": 1.389654
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 43.88979,
+        "lon": 1.448977
+      },
+      "southwest": {
+        "lat": 43.815938,
+        "lon": 1.293906
+      }
+    }
+  },
+  "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+  "id": "ff87264003a601139486b13989a1a6170678953c",
+  "name": "Fronton",
+  "place_id": "ChIJA_C1cZMcrBIR_GyRmBhWTjw",
+  "reference": "CoQBcgAAANQgOwMXZM-ncKWbGu7DPN61AH3Ch3WMLG6up84AAhLAwymBnJmUGlACcDdOaTq0W3vHjJzbiSw2gZWcikx8vu6JVdeZ72cG2S1_byvpNDMqF4fsYsWAD0xTOG3vjpXCpbVVFmMx8_u7sZi6mjhk3_cTJXqc3oq16DPnwbhX-E-uEhDFmQO8Wh5rwwNSwUaPcCJ8GhT1dG5VP9VfEatRiJwR0tFRVZcnQw",
+  "types": [
+    "locality",
+    "political"
+  ]
+}
