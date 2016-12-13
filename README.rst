@@ -20,6 +20,9 @@ SparkInClimate is open source project publically available on Bitbucket. To clon
 .. code-block:: bash
 
 	git clone https://bitbucket.org/sparkindata-irit/sparkinclimate.git
+	cd sparkinclimate
+	chmod a+x bin/*
+
 
 
 Run the following command to build the docker image *sparkinclimate* from web directory
@@ -45,6 +48,16 @@ Stop the Docker the container¶
 
 	docker ps
 	docker stop <container_id>
+
+
+Download dataset
+===============
+
+To donwload the dataset of weatehr newslatter from Meteo France since 2012, run the following commnand line.
+
+.. code-block:: bash
+
+	./bin/dataset --out dataset
 
 
 Version

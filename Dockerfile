@@ -19,7 +19,13 @@ RUN sh install-tagger.sh
 ENV PATH=$PATH:/sparkinclimate/treetagger/cmd:/sparkinclimate/treetagger/bin
 WORKDIR ..
 
-
 RUN pip3 install -r requirements.txt
+
+
+RUN chmod a+x bin/*
+RUN ./bin/dataset --out dataset
+
 ENTRYPOINT ["python3"]
 CMD ["server.py"]
+
+
