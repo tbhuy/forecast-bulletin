@@ -39,6 +39,6 @@ class DateParser(Resource):
     def get(self):
         '''Transforms PDF to logical structure'''
         args = dates_args.parse_args()
-        res= TextUtils.extract_date(args.text, context=args.context)
+        res= TextUtils.extract_date(args.text, context=args.context) 
         return res
 
