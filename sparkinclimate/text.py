@@ -29,8 +29,10 @@ class TextUtils:
                        if unicodedata.category(c) != 'Mn')
 
     @staticmethod
-    def extract_date(text, year=None, month=None, day=None):
+    def extract_date(text, context=None):
+        print(context)
         result = []
+        (year, month, day) = context.split("-")
         new_text = re.sub("\s+", " ", text)
         days = '(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)'
         months = '(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)'
@@ -123,6 +125,13 @@ class TextUtils:
         new_text = new_text.strip()
 
         if len(result) < 1:
-            result = [year+'-'+month+'-'+day]
+            result = [year + '-' + month + '-' + day]
 
-        return (result, new_text)
+        dates = []
+        for date in result:
+            date_fields = re.split(" ", date)
+            if len(date_fields) > 1:
+                dates.append({'startDate': date_fields[0], 'endDate': date_fields[1]})
+            else:
+                dates.append({'date': date_fields[0]})
+        return {'original_text': text, 'nodate_text': new_text, 'dates': dates}

@@ -20,15 +20,12 @@ for template in os.listdir('resources/templates'):
     templates.append(template.replace('.json', ''))
 
 pdf_parser = reqparse.RequestParser()
-# pdf_parser = api.parser()
 pdf_parser.add_argument('pdf', location='files', type=FileStorage, required=True, help='The PDF file to be parsed')
 
 pdf_logical = pdf_parser.copy()
-pdf_logical.add_argument('template', choices=templates, type=str, required=False, location='from',
-                         help='The text to be annotated')
 pdf_logical.add_argument('custom-template', location='files', type=FileStorage, required=False,
                          help='The PDF file to be parsed')
-
+pdf_logical.add_argument('template', type=str, required=True, trim=True, location='form', choices=templates, help='The text to be annotated')
 
 html = api.model('html', {'html': fields.String(required=False, description='HTML source code')})
 
@@ -113,8 +110,9 @@ class PDFLogical(Resource):
     def post(self):
         '''Transforms PDF to logical structure'''
 
-        args = pdf_parser.parse_args()
+        args = pdf_logical.parse_args()
 
+        print(args)
         uploaded_pdf = args['pdf']
         pdf_file = 'cache/pdf/' + str(uuid.uuid4()) + '.pdf'
         if not os.path.exists(os.path.dirname(pdf_file)):
@@ -139,6 +137,7 @@ class PDFLogical(Resource):
                     if os.path.exists(os.path.dirname(file)):
                         template_file = file
         html = None
+        print("Template File: "+str(template_file))
         if os.path.isfile(pdf_file):
             pdf = PDFDocument(pdf_file)
             html = pdf.logical(template_file=template_file)

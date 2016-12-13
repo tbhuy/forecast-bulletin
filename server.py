@@ -2,6 +2,7 @@ from sparkinclimate.api import app
 import sparkinclimate.api.places
 import sparkinclimate.api.facts
 import sparkinclimate.api.pdf
+import sparkinclimate.api.dates
 
 if __name__ == '__main__':
     # app.config['SWAGGER_UI_DOC_EXPANSION'] = 'list'

@@ -264,7 +264,6 @@ class PDFDocument(object):
         self.__load()
         records = []
         (year, month, day) = date.split("-")
-
         fcount = 0
         for child in node.children:
             if not isinstance(child, NavigableString):
@@ -288,24 +287,18 @@ class PDFDocument(object):
 
                             fact = title
 
-                            (dates, new_text) = TextUtils.extract_date(fact, year=year,
-                                                                       month=month,
-                                                                       day=day)
+                            extracted_dates = TextUtils.extract_date(fact, context=date)
 
-                            (facts,keywords) = self.__find_facts(new_text)
+                            (facts,keywords) = self.__find_facts(extracted_dates['nodate_text'])
                             detected_places = self.__communes.annotate(title + " " + description, context={'region':region})
 
-                            for date_instance in dates:
+                            for date_instance in extracted_dates['dates']:
                                 fact = WeatherFact()
 
                                 fact.dateIssued = date
 
-                                date_fields = re.split(" ", date_instance)
-                                if len(date_fields) > 0:
-                                    fact.startDate = date_fields[0]
-                                    fact.endDate = date_fields[0]
-                                if len(date_fields) > 1:
-                                    fact.endDate = date_fields[1]
+                                fact.startDate = date_instance['startDate'] if 'startDate' in date_instance else date_instance['date']
+                                fact.endDate = date_instance['endDate'] if'endDate' in  date_instance else date_instance['date']
 
                                 fact.title = fact_raw
                                 fact.description = description
