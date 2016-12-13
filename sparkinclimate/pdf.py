@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import uuid
+import requests
 
 # noinspection PyPackageRequirements
 from pdfminer.converter import HTMLConverter
@@ -30,6 +31,23 @@ class PDFDocument(object):
         self.__stemmer = None
         self.__lexical = None
         self.__loaded = False
+
+    @staticmethod
+    def download(url, filename):
+        try:
+            os.makedirs(os.path.dirname(filename))
+        except:
+            pass
+        if not os.path.exists(filename):
+            r = requests.get(url, allow_redirects=True)
+            f = open(filename, 'wb')
+
+            for chunk in r.iter_content(chunk_size=512 * 1024):
+                if chunk:  # filter out keep-alive new chunks
+                    f.write(chunk)
+            f.close()
+        return
+
 
     def __load(self):
         if not self.__loaded:

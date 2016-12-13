@@ -8,6 +8,7 @@ import pytz
 class TextUtils:
     @staticmethod
     def normalize(text):
+        text = TextUtils.strip_accents(text)
         text = re.sub("\\W+", " ", text).strip()
         text = re.sub("\\s+", "-", text).lower()
         return text

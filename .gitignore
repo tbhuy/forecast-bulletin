@@ -97,5 +97,5 @@ treetagger-win
 treetagger-win/**/*
 cache
 cache/**/*
-dataset
+dataset/
 dataset/**/*

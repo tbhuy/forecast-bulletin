@@ -1,0 +1,98 @@
+#!/usr/bin/env /python
+
+import argparse
+import configparser
+import datetime
+import os
+import os.path
+import sys
+
+sys.path.append('..')
+sys.path.append(os.getcwd())
+
+from sparkinclimate.text import TextUtils
+from sparkinclimate.pdf import PDFDocument
+
+
+# noinspection PyShadowingNames
+def configuration():
+    config = configparser.RawConfigParser()
+    filename = None
+    paths = ['config.ini', '../config.ini']
+    for path in paths:
+        if os.path.isfile(path):
+            filename = path
+            break
+    if filename:
+        config.read(filename)
+    return config
+
+
+if __name__ == '__main__':
+    config = configuration()
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-o", "--out", help="The output directory")
+    args = parser.parse_args()
+    args.out = args.out if args.out else 'dataset'
+
+    url_pattern = "https://donneespubliques.meteofrance.fr/donnees_libres/bulletins/BCMR/BCMR_%s_%s%s.pdf"
+    date = datetime.datetime.now().strftime("%Y-%m-%d")
+    (d_year, d_month, d_day) = str(date).split("-")
+
+    moth_days = [31,
+                 28,
+                 31,
+                 30,
+                 31,
+                 30,
+                 31,
+                 31,
+                 30,
+                 31,
+                 30,
+                 31]
+
+    regions = {"01": "Alsace",
+               "02": "Aquitaine",
+               "03": "Auvergne",
+               "04": "Bourgogne",
+               "05": "Bretagne",
+               "06": "Centre-Val de Loire",
+               "07": "Champagne-Ardenne",
+               "08": "Corse",
+               "09": "Franche-Comté",
+               "10": "Île-de-France",
+               "11": "Languedoc-Roussillon",
+               "12": "Limousin",
+               "13": "Lorraine",
+               "14": "Midi-Pyrénées",
+               "15": "Nord-pas-de-Calais",
+               "16": "Basse-Normandie",
+               "17": "Haute-Normandie",
+               "18": "Pays de la Loire",
+               "19": "Picardie",
+               "20": "Poitou-Charentes",
+               "21": "Provence-Alpes-Côte-d'Azur",
+               "22": "Rhône-Alpes"}
+
+    i = 1
+    for region_id in regions:
+        region_name = regions[region_id]
+        norm_region_name = TextUtils.normalize(region_name)
+        for year in range(2012, int(d_year) + 1):
+            str_year = str(year)
+            for month in range(1, 13):
+                str_month = str(month)
+                if month < 10:
+                    str_month = "0" + str(month)
+                print("Downloading weather newsletter for %s (%s-%s-%s)" % (
+                region_name, str_year, str_month, moth_days[month - 1]))
+                url = url_pattern % (region_id, str_year, str_month)
+                filename = args.out + "/" + norm_region_name.lower() + "/meteo_" + str(
+                    i) + "_" + norm_region_name.lower() + "_" + str_year + "-" + str_month + "-" + str(
+                    moth_days[month - 1]) + ".pdf"
+                if not os.path.exists(filename):
+                    PDFDocument.download(url, filename)
+                    pass
+                i += 1
