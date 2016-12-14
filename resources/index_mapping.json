@@ -1,0 +1,157 @@
+{
+	"settings": {
+		"analysis": {
+			"filter": {
+				"en_snowball": {
+					"type": "stop",
+					"language": "English"
+				},
+				"fr_snowball": {
+					"type": "stop",
+					"language": "French"
+				}
+			},
+			"analyzer": {
+				"storable": {
+					"type": "custom",
+					"tokenizer": "keyword"
+				},
+				"searchable": {
+					"tokenizer": "standard",
+					"filter": ["standard",
+					"lowercase",
+					"fr_snowball",
+					"asciifolding"]
+				}
+			}
+		}
+	},
+	"mappings": {
+		"facts": {
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"date": {
+					"properties": {
+						"day": {
+							"type": "integer"
+						},
+						"year": {
+							"type": "integer"
+						},
+						"month": {
+							"type": "string",
+							"index": "not_analyzed"
+						}
+					}
+				},
+				"dateIssued": {
+					"type": "date",
+					"format": "yyyy-MM-dd"
+				},
+				"startDate": {
+					"type": "date",
+					"format": "yyyy-MM-dd"
+				},
+				"endDate": {
+					"type": "date",
+					"format": "yyyy-MM-dd"
+				},
+				"fact": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"keywords": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"description": {
+					"type": "string",
+					"analyzer": "searchable"
+				},
+				"places": {
+					"properties": {
+						"name": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"commune": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"location": {
+							"type": "geo_point"
+						},
+						"code_insee": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"country": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"department": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"prefecture": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"zip": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"geometry": {
+							"properties": {
+								"location": {
+									"type": "geo_point"
+								},
+								"viewport": {
+									"properties": {
+										"northeast": {
+											"type": "geo_point"
+										},
+										"southwest": {
+											"type": "geo_point"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"region": {
+					"properties": {
+						"name": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"formatted_address": {
+							"type": "string",
+							"analyzer": "searchable"
+						},
+						"geometry": {
+							"properties": {
+								"location": {
+									"type": "geo_point"
+								},
+								"viewport": {
+									"properties": {
+										"northeast": {
+											"type": "geo_point"
+										},
+										"southwest": {
+											"type": "geo_point"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -321,8 +321,8 @@ class PDFDocument(object):
                                 fact.title = fact_raw
                                 fact.description = description
 
-                                fact.facts = facts
-                                fact.keywords = keywords
+                                fact.facts = list(facts)
+                                fact.keywords = list(keywords)
 
                                 fact.places = detected_places['places']
 
@@ -345,6 +345,7 @@ class PDFDocument(object):
 
 
 class JSONSerializable(object):
+
     def __repr__(self):
         return json.dumps(self.__dict__)
 
@@ -352,6 +353,7 @@ class JSONSerializable(object):
 class WeatherFact(JSONSerializable):
     def __init__(self):
         super().__init__()
+        self.id = None
         self.dateIssued = None
         self.startDate = None
         self.endDate = None

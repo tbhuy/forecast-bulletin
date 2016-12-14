@@ -31,7 +31,6 @@ class TextUtils:
 
     @staticmethod
     def extract_date(text, context=None):
-        print(context)
         result = []
         (year, month, day) = context.split("-")
         new_text = re.sub("\s+", " ", text)

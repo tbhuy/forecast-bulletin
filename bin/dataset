@@ -77,7 +77,7 @@ if __name__ == '__main__':
                "22": "Rhône-Alpes"}
 
     i = 1
-    for region_id in regions:
+    for region_id in sorted(regions):
         region_name = regions[region_id]
         norm_region_name = TextUtils.normalize(region_name)
         for year in range(2012, int(d_year) + 1):
@@ -86,13 +86,12 @@ if __name__ == '__main__':
                 str_month = str(month)
                 if month < 10:
                     str_month = "0" + str(month)
-                print("Downloading weather newsletter for %s (%s-%s-%s)" % (
-                region_name, str_year, str_month, moth_days[month - 1]))
                 url = url_pattern % (region_id, str_year, str_month)
                 filename = args.out + "/" + norm_region_name.lower() + "/meteo_" + str(
                     i) + "_" + norm_region_name.lower() + "_" + str_year + "-" + str_month + "-" + str(
                     moth_days[month - 1]) + ".pdf"
                 if not os.path.exists(filename):
+                    print("Downloading weather newsletter for %s (%s-%s-%s)" % (region_name, str_year, str_month, moth_days[month - 1]))
                     PDFDocument.download(url, filename)
                     pass
                 i += 1

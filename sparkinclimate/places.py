@@ -1,15 +1,17 @@
 import csv
 import json
-import re
 
 import nltk
+import jsonpickle
 
 from sparkinclimate.text import TextUtils
 
 
+
+
 class JSONSerializable(object):
     def __repr__(self):
-        return json.dumps(self.__dict__)
+        return jsonpickle.encode(self)
 
 
 class Location(JSONSerializable):
