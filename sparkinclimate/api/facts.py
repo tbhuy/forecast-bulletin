@@ -14,7 +14,7 @@ from sparkinclimate.api.pdf import pdf_parser
 from sparkinclimate.api.places import geometry
 from sparkinclimate.api.places import place
 
-nsfacts = api.namespace('facts', description='PDF file parsing')
+nsfacts = api.namespace('facts', description='Facts extraction API')
 
 
 regions = []
@@ -32,10 +32,10 @@ finally:
 
 pdf_facts = pdf_parser.copy()
 pdf_facts.add_argument('region', type=str, required=True, trim=True, location='form', choices=regions,
-                       help='The text to be annotated')
+                       help='The region of the weather report')
 pdf_facts.add_argument('date', type=str, required=True, trim=True, location='form',
                        default=datetime.datetime.now().strftime("%Y-%m-%d"),
-                       help='Comma-separated contexts (e.g. region:aquitaine)')
+                       help='The issue date of the weather report ')
 
 
 day = api.model('Day', {
@@ -74,11 +74,11 @@ facts = api.model('Facts', {
 class PDFFacts(Resource):
     '''Parse PDF Document'''
 
-    @nsfacts.doc('post_pdf_facts')
+    @nsfacts.doc('post_facts_extract')
     @nsfacts.marshal_with(facts)
     @nsfacts.expect(pdf_facts, validate=True)
     def post(self):
-        '''Parse PDF Document'''
+        '''Extracts weather facts from PDF document of Meteo France weather reports.'''
 
         args = pdf_facts.parse_args()
         uploaded_file = args['pdf']  # This is FileStorage instance

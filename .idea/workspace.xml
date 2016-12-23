@@ -5,14 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb51c6ee-e13e-49ba-8069-4d963e39df08" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/process.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/index_mapping.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.dockerignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sparkinclimate/api/search.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dockerfile-complete" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/process.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/eucircos_regions_departements_circonscriptions_communes_gps.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/index_mapping.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/lexical/meteo-facts.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/lexical/meteo-words.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/lexical/phenomenes-meteo-franc.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/region_list.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/alsace.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/aquitaine.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/auvergne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/aveyron.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/basse-normandie.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/bourgogne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/bretagne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/cahors-lot.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/centre-val-de-loire.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/centre.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/champagne-ardenne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/charentes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/corse.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/franche-comte.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/fronton.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/gaillac.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/gascogne-saint-mont-madiran.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/haut-poitou.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/haute-normandie.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/ile-de-france.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/languedoc-roussillon.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/limousin.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/lorraine.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/midi-pyrenees.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/nord-pas-de-calais.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/paca.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/pays-de-la-loire.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/picardie.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/poitou-charentes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/provence-alpes-cote-d-azur.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/rhone-alpes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/tarn-et-garonne - Copie.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/regions/tarn-et-garonne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-alsace.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-aquitaine.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-auvergne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-aveyron.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-bourgogne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-cahors-lot.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-champagne-ardenne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-charentes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-corse.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-franche-comte.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-fronton.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-gaillac.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-gascogne-saint-mont-madiran.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-haut-poitou.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-languedoc-roussillon.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-limousin.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-lorraine.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-paca.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-pays-de-la-loire.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-rhone-alpes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bsv-vigne-tarn-et-garonne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/templates/bulletin-climatique.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/dataset" afterPath="$PROJECT_DIR$/bin/dataset" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rst" afterPath="$PROJECT_DIR$/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/__init__.py" afterPath="$PROJECT_DIR$/bin/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/api/__init__.py" afterPath="$PROJECT_DIR$/sparkinclimate/api/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/api/dates.py" afterPath="$PROJECT_DIR$/sparkinclimate/api/dates.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/api/facts.py" afterPath="$PROJECT_DIR$/sparkinclimate/api/facts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/api/pdf.py" afterPath="$PROJECT_DIR$/sparkinclimate/api/pdf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/api/places.py" afterPath="$PROJECT_DIR$/sparkinclimate/api/places.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/pdf.py" afterPath="$PROJECT_DIR$/sparkinclimate/pdf.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/places.py" afterPath="$PROJECT_DIR$/sparkinclimate/places.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparkinclimate/text.py" afterPath="$PROJECT_DIR$/sparkinclimate/text.py" />
     </list>
     <ignored path="sparkinclimate.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,91 +104,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pdf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sparkinclimate/pdf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.137932">
-              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/process.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5376569">
-              <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-              <folding>
-                <element signature="e#24#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataset" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dataset">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_mapping.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/index_mapping.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.115385">
-              <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+              <caret line="90" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="places.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sparkinclimate/places.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.7586207">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sparkinclimate/text.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.758621">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.rst">
+      <file leaf-file-name="config.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,11 +144,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataset" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/dataset">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="process" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/process">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start-server" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/start-server">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -173,37 +238,44 @@
         <option value="$PROJECT_DIR$/resources/template.html" />
         <option value="$PROJECT_DIR$/resources/rules/meteo.json" />
         <option value="$PROJECT_DIR$/example-flask-restplus.py" />
-        <option value="$PROJECT_DIR$/README.rst" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/Dockerfile-complete" />
         <option value="$PROJECT_DIR$/resources/region_list.csv" />
         <option value="$PROJECT_DIR$/api.py" />
         <option value="$PROJECT_DIR$/placesapi.py" />
         <option value="$PROJECT_DIR$/server2.py" />
-        <option value="$PROJECT_DIR$/sparkinclimate/api/places.py" />
         <option value="$PROJECT_DIR$/sparkinclimate/api/api.py" />
-        <option value="$PROJECT_DIR$/sparkinclimate/api/__init__.py" />
-        <option value="$PROJECT_DIR$/sparkinclimate/api/facts.py" />
-        <option value="$PROJECT_DIR$/sparkinclimate/api/pdf.py" />
-        <option value="$PROJECT_DIR$/server.py" />
-        <option value="$PROJECT_DIR$/sparkinclimate/api/dates.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bin/dataset" />
         <option value="$PROJECT_DIR$/process.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/sparkinclimate/places.py" />
         <option value="$PROJECT_DIR$/resources/index_mapping.json" />
-        <option value="$PROJECT_DIR$/sparkinclimate/pdf.py" />
-        <option value="$PROJECT_DIR$/bin/process.py" />
         <option value="$PROJECT_DIR$/sparkinclimate/text.py" />
+        <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/sparkinclimate/api/__init__.py" />
+        <option value="$PROJECT_DIR$/sparkinclimate/api/dates.py" />
+        <option value="$PROJECT_DIR$/sparkinclimate/api/places.py" />
+        <option value="$PROJECT_DIR$/sparkinclimate/api/pdf.py" />
+        <option value="$PROJECT_DIR$/sparkinclimate/api/facts.py" />
+        <option value="$PROJECT_DIR$/sparkinclimate/api/search.py" />
+        <option value="D:/tmp/elasticsearch_docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/README.rst" />
+        <option value="$PROJECT_DIR$/bin/process.py" />
+        <option value="$PROJECT_DIR$/Dockerfile-complete" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/sparkinclimate/places.py" />
+        <option value="$PROJECT_DIR$/sparkinclimate/pdf.py" />
+        <option value="$PROJECT_DIR$/tox.ini" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.dockerignore" />
+        <option value="$PROJECT_DIR$/bin/__init__.py" />
+        <option value="$PROJECT_DIR$/bin/start-server" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1592" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -230,7 +302,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,41 +331,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sparkinclimate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparkinclimate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparkinclimate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparkinclimate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparkinclimate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,38 +348,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspaces\python\sparkinclimate\sparkinclimate\api" />
       <recent name="D:\workspaces\python\sparkinclimate" />
       <recent name="D:\workspaces\python\sparkinclimate\sparkinclimate" />
       <recent name="D:\workspaces\python\sparkinclimate\resources" />
       <recent name="D:\workspaces\python" />
-      <recent name="D:\workspaces\python\sparkinclimate\sparkingclimate" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspaces\python\sparkinclimate\bin" />
       <recent name="D:\workspaces\python\sparkinclimate" />
+      <recent name="D:\workspaces\python\sparkinclimate\bin" />
       <recent name="D:\workspaces\python\sparkinclimate\sparkinclimate\api" />
       <recent name="D:\workspaces\python\sparkinclimate\resources\logical-rules" />
       <recent name="D:\workspaces\python\sparkinclimate\resources\rules" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.process">
-    <configuration default="false" name="server" type="PythonConfigurationType" factoryName="Python" singleton="true" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sparkinclimate" />
-      <option name="SCRIPT_NAME" value="D:\workspaces\python\sparkinclimate\sparkinclimate\api\pdf.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.server (1)">
     <configuration default="false" name="server2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -400,6 +427,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="sparkinclimate" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/process.py" />
+      <option name="PARAMETERS" value="-e ns3038079.ip-5-135-160.eu" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="search" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sparkinclimate/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sparkinclimate" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sparkinclimate/api/search.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -538,19 +582,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.server" />
-      <item index="1" class="java.lang.String" itemvalue="Python.server2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.server (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.dataset" />
-      <item index="4" class="java.lang.String" itemvalue="Python.process" />
+      <item index="0" class="java.lang.String" itemvalue="Python.server2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.server (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.dataset" />
+      <item index="3" class="java.lang.String" itemvalue="Python.process" />
+      <item index="4" class="java.lang.String" itemvalue="Python.search" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.process" />
-        <item index="1" class="java.lang.String" itemvalue="Python.server (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dataset" />
-        <item index="3" class="java.lang.String" itemvalue="Python.server2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.server" />
+        <item index="0" class="java.lang.String" itemvalue="Python.server (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.search" />
+        <item index="2" class="java.lang.String" itemvalue="Python.process" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dataset" />
+        <item index="4" class="java.lang.String" itemvalue="Python.server2" />
       </list>
     </recent_temporary>
   </component>
@@ -616,7 +660,13 @@
       <option name="project" value="LOCAL" />
       <updated>1481668895432</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Batch processing of downloaded weather newslettres #3">
+      <created>1481676862409</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1481676862409</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -629,27 +679,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="1592" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17544988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17110874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44630405" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44593087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29428172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12660669" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07622601" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34867504" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38684505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -672,7 +722,8 @@
     <MESSAGE value="push resource file to repository #10" />
     <MESSAGE value="refactoring project" />
     <MESSAGE value="Download a dataset of weather newsltters from Meteo France #2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Download a dataset of weather newsltters from Meteo France #2" />
+    <MESSAGE value="Batch processing of downloaded weather newslettres #3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Batch processing of downloaded weather newslettres #3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -681,74 +732,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="198" column="8" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/tools/Python35/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1460" column="0" selection-start-line="1460" selection-start-column="0" selection-end-line="1460" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/places.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/tools/Python35/Lib/site-packages/nltk/tokenize/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/namespace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/eucircos_regions_departements_circonscriptions_communes_gps.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7777777">
-          <caret line="6" column="58" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-1154108827/_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0344827">
@@ -760,13 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/namespace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -782,13 +758,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="354" column="12" selection-start-line="354" selection-start-column="6" selection-end-line="354" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -821,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/tools/Python35/Lib/argparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="252" column="32" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/reqparse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -835,18 +797,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/tools/Python35/Lib/site-packages/treetaggerwrapper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="891" column="24" selection-start-line="891" selection-start-column="18" selection-end-line="891" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -861,20 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="89" column="38" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile-complete">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/region_list.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -903,14 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -918,37 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="112" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/places.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="40" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/dates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -964,17 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="181" column="4" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/facts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -982,14 +872,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/tools/Python35/Lib/site-packages/elasticsearch/client/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="483" column="15" selection-start-line="483" selection-start-column="15" selection-end-line="483" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
+    <entry file="file://C:/tools/Python35/Lib/argparse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <caret line="812" column="20" selection-start-line="812" selection-start-column="13" selection-end-line="812" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/dates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/namespace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/flask_restplus/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="260" column="0" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/places.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="49" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/pdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tmp/elasticsearch_docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -997,7 +965,97 @@
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/api/facts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41379312">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/places.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkinclimate/pdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.5614033">
+          <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tox.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.dockerignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1005,7 +1063,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+          <caret line="90" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1018,66 +1076,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/places.py">
+    <entry file="file://$PROJECT_DIR$/bin/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7586207">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/dataset">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/text.py">
+    <entry file="file://$PROJECT_DIR$/bin/start-server">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.758621">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/index_mapping.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.115385">
-          <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sparkinclimate/pdf.py">
+    <entry file="file://$PROJECT_DIR$/bin/process">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.137932">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5376569">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>

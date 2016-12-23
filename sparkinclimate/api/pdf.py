@@ -1,5 +1,4 @@
-import csv
-import datetime
+import json
 import os
 import uuid
 
@@ -8,78 +7,82 @@ from flask_restplus import reqparse
 from werkzeug.datastructures import FileStorage
 
 from sparkinclimate.api import api
-from sparkinclimate.api import communes
 from sparkinclimate.pdf import PDFDocument
-from sparkinclimate.api.places import geometry
-from sparkinclimate.api.places import place
 
-nspdf = api.namespace('pdf', description='PDF file parsing')
+nspdf = api.namespace('pdf', description='PDF file parsing API')
 
-templates = ['custom']
+template_choices = ['custom']
 for template in os.listdir('resources/templates'):
-    templates.append(template.replace('.json', ''))
+    template_choices.append(template.replace('.json', ''))
 
 pdf_parser = reqparse.RequestParser()
 pdf_parser.add_argument('pdf', location='files', type=FileStorage, required=True, help='The PDF file to be parsed')
 
 pdf_logical = pdf_parser.copy()
 pdf_logical.add_argument('custom-template', location='files', type=FileStorage, required=False,
-                         help='The PDF file to be parsed')
-pdf_logical.add_argument('template', type=str, required=True, trim=True, location='form', choices=templates, help='The text to be annotated')
-
+                         help='The JSON template file to be used for parsing PDF file. Check "Template" model for more information about how this file must be structured.')
+pdf_logical.add_argument('template', type=str, required=True, trim=True, location='form', choices=template_choices,
+                         help='The predefined tempate that sould be used for parsing file. Setting this paramter to "custom" allow to consider the submitted template file.')
 html = api.model('html', {'html': fields.String(required=False, description='HTML source code')})
 
-level = api.model('Level', {
-    'selectors': fields.List(fields.String, required=True, description='The name of the place'),
-    'tag': fields.String(required=True, description='The country of the place'),
-    'level': fields.Integer(required=True, description='The region of the place (France)')
-})
-template = api.model('Template', {
-    'levels': fields.List(fields.Nested(level))
+level = api.model('level', {
+    'selectors': fields.List(fields.String, required=False, description='The country of the place'),
+    'tag': fields.String(required=False, description='The country of the place'),
+    'level': fields.Integer(required=False, description='The country of the place')
 })
 
-day = api.model('Day', {
-    'year': fields.Integer(required=True, description='The region of the place (France)'),
-    'month': fields.String(required=False, description='The country of the place'),
-    'day': fields.Integer(required=True, description='The region of the place (France)')
+fusion = api.model('fusion', {
+    'first': fields.List(fields.String, required=False, description='The country of the place'),
+    'second': fields.List(fields.String, required=False, description='The country of the place')
 })
 
-region = api.model('Region', {
-    'name': fields.String(required=False, description='The country of the place'),
-    'formatted_address': fields.String(required=False, description='The country of the place'),
-    'geometry': fields.Nested(geometry, required=False, description='The geometry')
+template = api.model('template', {
+    'levels': fields.List(fields.Nested(level), required=False, description='The country of the place'),
+    'exclude': fields.List(fields.String, required=False, description='The country of the place'),
+    'fusion': fields.List(fields.String, required=False, description='The country of the place')
 })
 
-fact = api.model('Fact', {
-    'title': fields.String(required=True, description='The country of the place'),
-    'description': fields.String(required=False, description='The country of the place'),
+templates = api.model('templates',
+                      {'templates': fields.List(fields.String, required=False, description='The list of templates')})
 
-    'dateIssued': fields.String(required=False, description='The country of the place'),
-    'startDate': fields.String(required=False, description='The country of the place'),
-    'endDate': fields.String(required=False, description='The country of the place'),
-    'date': fields.Nested(day, required=False, description='The country of the place'),
 
-    'facts': fields.List(fields.String, required=False, description='The country of the place'),
-    'keywords': fields.List(fields.String, required=False, description='The country of the place'),
+@nspdf.route('/template/<id>')
+@nspdf.response(404, 'Template not found')
+@nspdf.param('id', 'The identifier of the template')
+class Template(Resource):
+    @nspdf.doc('get_template')
+    @nspdf.marshal_with(template)
+    def get(self, id):
+        '''Retrieve the template using its identifier'''
 
-    'places': fields.List(fields.Nested(place), required=False, description='The country of the place'),
-    'region': fields.List(fields.Nested(region), required=False, description='The country of the place')
+        file = 'resources/templates/' + str(id) + '.json'
+        if os.path.isfile(file):
+            with open(file, 'r') as file:
+                return json.load(file)
+        else:
+            api.abort(404, "Template {} doesn't exist".format(id))
 
-})
-facts = api.model('Facts', {
-    'facts': fields.List(fields.Nested(fact))
-})
+
+@nspdf.route('/templates')
+class Templates(Resource):
+    @nspdf.doc('get_templates')
+    @nspdf.marshal_with(templates)
+    def get(self):
+        '''Retrieve the liste of templates'''
+
+
+        global template_choices
+
+        return {'templates': template_choices[1:]}
 
 
 @nspdf.route('/parse')
 class PDFParse(Resource):
-    '''Parse PDF Document'''
-
     @nspdf.doc('post_pdf_parse')
     @nspdf.marshal_with(html)
     @nspdf.expect(pdf_parser, validate=True)
     def post(self):
-        '''Parse PDF Document'''
+        '''Transforms PDF document to HMTL'''
 
         args = pdf_parser.parse_args()
         uploaded_file = args['pdf']  # This is FileStorage instance
@@ -108,7 +111,7 @@ class PDFLogical(Resource):
     @nspdf.marshal_with(html)
     @nspdf.expect(pdf_logical, validate=True)
     def post(self):
-        '''Transforms PDF to logical structure'''
+        '''Transforms PDF document into a logically structured HTML'''
 
         args = pdf_logical.parse_args()
 
@@ -137,7 +140,7 @@ class PDFLogical(Resource):
                     if os.path.exists(os.path.dirname(file)):
                         template_file = file
         html = None
-        print("Template File: "+str(template_file))
+        print("Template File: " + str(template_file))
         if os.path.isfile(pdf_file):
             pdf = PDFDocument(pdf_file)
             html = pdf.logical(template_file=template_file)
@@ -146,4 +149,3 @@ class PDFLogical(Resource):
             return {'html': html}
         else:
             api.abort(500, "Problem while parsing the PDF")
-

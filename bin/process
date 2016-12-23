@@ -1,0 +1,62 @@
+#!/usr/bin/env /python
+
+import argparse
+import configparser
+import os
+import os.path
+import sys
+
+import jsonpickle
+from elasticsearch import Elasticsearch
+
+sys.path.append('..')
+sys.path.append(os.getcwd())
+
+from sparkinclimate.pdf import PDFDocument
+
+
+# noinspection PyShadowingNames
+def configuration():
+    config = configparser.RawConfigParser()
+    filename = None
+    paths = ['config.ini', '../config.ini']
+    for path in paths:
+        if os.path.isfile(path):
+            filename = path
+            break
+    if filename:
+        config.read(filename)
+    return config
+
+
+if __name__ == '__main__':
+    config = configuration()
+    out = open("faits-marquants-meteo-france.ndjson", "w")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--input", help="The inout directory of pdf files")
+    parser.add_argument("-e", "--elasticsearch", help="The elaticsearch host")
+    args = parser.parse_args()
+    args.input = args.input if args.input else 'dataset'
+    elasticsearch = Elasticsearch([args.elasticsearch]) if args.elasticsearch else None
+    for location in os.listdir(args.input):
+        for file in os.listdir(args.input + '/' + location):
+            (meteo, id, region, date) = file.replace('.pdf', '').split('_')
+            print(region + " " + date)
+            document = PDFDocument(args.input + '/' + location + '/' + file)
+            facts = document.facts(region=region, date=date)
+            for fact in facts['facts']:
+                fact.id = id
+                try:
+                    print(jsonpickle.encode(fact, unpicklable=False))
+                    out.write(jsonpickle.encode(fact, unpicklable=False))
+                    out.write("\n")
+
+                    if elasticsearch:
+                        #elasticsearch.index(index="sparkinclimate", doc_type="facts",
+                        #                    body=jsonpickle.encode(fact, unpicklable=False))
+                        pass
+                    else:
+                        print(jsonpickle.encode(fact, unpicklable=False))
+                    pass
+                except:
+                    pass

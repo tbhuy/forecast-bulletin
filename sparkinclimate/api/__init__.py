@@ -6,6 +6,6 @@ from sparkinclimate.places import Communes
 
 app = Flask(__name__)
 api = Api(app, version='1.0', title='SparkInClimate API',
-          description='An API for extraction climate data',
+          description='A RESTful API for extraction weather facts extraction and search based on Meteo France monthly reports.',
           )
 communes = Communes()

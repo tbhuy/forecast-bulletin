@@ -60,8 +60,8 @@ class PDFDocument(object):
 
             self.__stemmer = FrenchStemmer()
             self.__lexical = []
-            files = ['resources/lexical/meteo-facts.csv', 'resources/lexical/meteo-words.csv',
-                     'resources/lexical/phenomenes-meteo-franc.csv']
+            files = ['data/lexical/meteo-facts.csv', 'data/lexical/meteo-words.csv',
+                     'data/lexical/phenomenes-meteo-franc.csv']
             for filename in files:
                 file = open(filename, "r", encoding='utf-8')
                 try:
@@ -113,7 +113,7 @@ class PDFDocument(object):
 
     def logical(self, template_file=None):
 
-        temple_file = "resources/template.html"
+        temple_file = "data/template.html"
         output_file = 'cache/html/' + str(uuid.uuid4()) + '.html'
         if not os.path.exists(os.path.dirname(output_file)):
             os.makedirs(os.path.dirname(output_file))
@@ -231,7 +231,7 @@ class PDFDocument(object):
         return soup.prettify()
 
     def facts(self, region=None, date=None):
-        logical = self.logical(template_file='resources/templates/bulletin-climatique.json')
+        logical = self.logical(template_file='data/templates/bulletin-climatique.json')
         soup = BeautifulSoup(logical, 'html5lib')
         return {'facts': self.__extract(soup.find('div'), date=date, region=region)}
 
@@ -326,7 +326,7 @@ class PDFDocument(object):
 
                                 fact.places = detected_places['places']
 
-                                region_file = "resources/regions/" + TextUtils.normalize(region) + ".json"
+                                region_file = "data/regions/" + TextUtils.normalize(region) + ".json"
                                 if os.path.exists(region_file):
                                     with open(region_file) as json_data:
                                         region_object = json.load(json_data)

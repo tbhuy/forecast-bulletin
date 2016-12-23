@@ -51,13 +51,23 @@ Stop the Docker the container¶
 
 
 Download dataset
-===============
+==================
 
 To donwload the dataset of weatehr newslatter from Meteo France since 2012, run the following commnand line.
 
 .. code-block:: bash
 
 	./bin/dataset --out dataset
+
+
+Process PDF files
+=================
+
+In order to extract facts from pdf files, run the following commnand line.
+
+.. code-block:: bash
+
+	./bin/process --input dataset
 
 
 Version

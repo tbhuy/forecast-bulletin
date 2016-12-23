@@ -46,7 +46,7 @@ class FrenchCommune(Place):
 class Communes:
     def __init__(self):
         self.__places = {}
-        self.__load(files=['resources/eucircos_regions_departements_circonscriptions_communes_gps.csv'])
+        self.__load(files=['data/eucircos_regions_departements_circonscriptions_communes_gps.csv'])
 
     def __tokenize(self, text):
         return nltk.word_tokenize(text)
