@@ -1,11 +1,45 @@
 #!/usr/bin/env /python
 
+import argparse
+import configparser
+import os
+import sys
+
+sys.path.append('..')
+sys.path.append(os.getcwd())
+
 from sparkinclimate.api import app
+import sparkinclimate.api.dates
+import sparkinclimate.api.places
+import sparkinclimate.api.pdf
+import sparkinclimate.api.facts
+import sparkinclimate.api.search
+
+
+# noinspection PyShadowingNames
+def configuration():
+    config = configparser.RawConfigParser()
+    filename = None
+    paths = ['config.ini', '../config.ini']
+    for path in paths:
+        if os.path.isfile(path):
+            filename = path
+            break
+    if filename:
+        config.read(filename)
+    return config
+
 
 if __name__ == '__main__':
-    # app.config['SWAGGER_UI_DOC_EXPANSION'] = 'list'
-    # app.config['RESTPLUS_VALIDATE'] = True
-    app.config['RESTPLUS_MASK_SWAGGER'] = False
-    # app.config['ERROR_404_HELP'] = False
+    config = configuration()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", "--host", help="The host of API server")
+    parser.add_argument("-p", "--port", help="The port of API server")
+    args = parser.parse_args()
 
-    app.run(debug=True, host='0.0.0.0')
+    host = args.host if args.host else '0.0.0.0'
+    port = int(args.port) if args.port else 7070
+
+    app.config['RESTPLUS_MASK_SWAGGER'] = False
+
+    app.run(host=host, port=port)

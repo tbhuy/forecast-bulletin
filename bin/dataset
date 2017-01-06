@@ -2,6 +2,7 @@
 
 import argparse
 import configparser
+import csv
 import datetime
 import os
 import os.path
@@ -36,7 +37,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     args.out = args.out if args.out else 'dataset'
 
-    url_pattern = "https://donneespubliques.meteofrance.fr/donnees_libres/bulletins/BCMR/BCMR_%s_%s%s.pdf"
+    url_pattern = config['meteo-france']['pdf_url_pattern']
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     (d_year, d_month, d_day) = str(date).split("-")
 
@@ -53,28 +54,11 @@ if __name__ == '__main__':
                  30,
                  31]
 
-    regions = {"01": "Alsace",
-               "02": "Aquitaine",
-               "03": "Auvergne",
-               "04": "Bourgogne",
-               "05": "Bretagne",
-               "06": "Centre-Val de Loire",
-               "07": "Champagne-Ardenne",
-               "08": "Corse",
-               "09": "Franche-Comté",
-               "10": "Île-de-France",
-               "11": "Languedoc-Roussillon",
-               "12": "Limousin",
-               "13": "Lorraine",
-               "14": "Midi-Pyrénées",
-               "15": "Nord-pas-de-Calais",
-               "16": "Basse-Normandie",
-               "17": "Haute-Normandie",
-               "18": "Pays de la Loire",
-               "19": "Picardie",
-               "20": "Poitou-Charentes",
-               "21": "Provence-Alpes-Côte-d'Azur",
-               "22": "Rhône-Alpes"}
+    regions = {}
+    with open('data/region_list.csv', 'r', encoding='utf8') as file:
+        reader = csv.reader(file, delimiter='\t')
+        for row in reader:
+            regions[row[0]] = row[1]
 
     i = 1
     for region_id in sorted(regions):
@@ -91,7 +75,11 @@ if __name__ == '__main__':
                     i) + "_" + norm_region_name.lower() + "_" + str_year + "-" + str_month + "-" + str(
                     moth_days[month - 1]) + ".pdf"
                 if not os.path.exists(filename):
-                    print("Downloading weather newsletter for %s (%s-%s-%s)" % (region_name, str_year, str_month, moth_days[month - 1]))
+                    print("Downloading PDF! %s (%s-%s-%s)" % (
+                        region_name, str_year, str_month, moth_days[month - 1]))
                     PDFDocument.download(url, filename)
                     pass
+                else :
+                    print("PDF exists! %s (%s-%s-%s)" % (
+                        region_name, str_year, str_month, moth_days[month - 1]))
                 i += 1

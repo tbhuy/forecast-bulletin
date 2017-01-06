@@ -1,5 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Lamjed Ben Jabeur "Lamjed.Ben-Jabeur@irit.fr"
+
+
+
 LABEL vendor=IRIT \
     fr.irit.iris.sparkinclimate.is-beta= \
     fr.irit.iris.sparkinclimate.is-production=  \
@@ -28,6 +31,14 @@ RUN add-apt-repository ppa:webupd8team/java -y && \
     apt-get clean
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
+
+# Configure project
+COPY . /sparkinclimate
+WORKDIR /sparkinclimate
+RUN pip3 install -r requirements.txt
+RUN chmod a+x bin/*
+
+
 # Install Elasticsearch 5
 RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.1.1.tar.gz
 RUN tar -xzf elasticsearch-5.1.1.tar.gz
@@ -35,7 +46,7 @@ RUN useradd -m -d /home/elasticsearch elasticsearch
 RUN chown -R elasticsearch:elasticsearch elasticsearch-5.1.1/
 USER elasticsearch
 WORKDIR elasticsearch-5.1.1/
-RUN nohup bin/elasticsearch &
+RUN ./bin/elasticsearch -d
 USER root
 WORKDIR ..
 
@@ -47,10 +58,10 @@ RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagge
 RUN tar -zxvf tree-tagger-linux-3.2.1.tar.gz
 RUN tar -zxvf tagger-scripts.tar.gz
 WORKDIR lib
-RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-par-linux-3.2-utf8.bin.gz
-RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-chunker-par-linux-3.2-utf8.bin.gz
-RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-par-linux-3.2-utf8.bin.gz
-RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-chunker-par-linux-3.2-utf8.bin.gz
+RUN wget http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-par-linux-3.2-utf8.bin.gz \
+    http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-chunker-par-linux-3.2-utf8.bin.gz \
+    http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-par-linux-3.2-utf8.bin.gz \
+    http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-chunker-par-linux-3.2-utf8.bin.gz
 RUN gunzip english-par-linux-3.2-utf8.bin.gz
 RUN gunzip english-chunker-par-linux-3.2-utf8.bin.gz
 RUN gunzip french-par-linux-3.2-utf8.bin.gz
@@ -65,18 +76,15 @@ ENV PATH=$PATH:/sparkinclimate/treetagger/cmd:/sparkinclimate/treetagger/bin
 WORKDIR ..
 
 
-# Configure project
-COPY . /sparkinclimate
-WORKDIR /sparkinclimate
-RUN pip3 install -r requirements.txt
-RUN chmod a+x bin/*
+
 
 
 # Download and process PDF dataset
-# RUN ./bin/dataset --out dataset
-# RUN ./bin/process --input dataset --elasticsearch localhost
+RUN python3 bin/wait --block 300
+RUN curl -XPUT http://localhost:9200/sparkinclimate -d @data/index_mapping.json
+#RUN ./bin/dataset --out dataset
+#RUN ./bin/process --input dataset --elasticsearch localhostdataset
+#RUN ./bin/start-server --host 0.0.0.0 --port 7070
 
 # ENTRYPOINT ["python3"]
-# CMD ["server.py"]
-
-
+# CMD ["bin/server"]

@@ -12,7 +12,7 @@ from sparkinclimate.pdf import PDFDocument
 nspdf = api.namespace('pdf', description='PDF file parsing API')
 
 template_choices = ['custom']
-for template in os.listdir('resources/templates'):
+for template in os.listdir('data/templates'):
     template_choices.append(template.replace('.json', ''))
 
 pdf_parser = reqparse.RequestParser()
@@ -55,7 +55,7 @@ class Template(Resource):
     def get(self, id):
         '''Retrieve the template using its identifier'''
 
-        file = 'resources/templates/' + str(id) + '.json'
+        file = 'data/templates/' + str(id) + '.json'
         if os.path.isfile(file):
             with open(file, 'r') as file:
                 return json.load(file)
@@ -136,7 +136,7 @@ class PDFLogical(Resource):
                             uploaded_template.save(file)
                             template_file = file
                 else:
-                    file = 'resources/templates/' + template + '.json'
+                    file = 'data/templates/' + template + '.json'
                     if os.path.exists(os.path.dirname(file)):
                         template_file = file
         html = None

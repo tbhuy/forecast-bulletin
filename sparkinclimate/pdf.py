@@ -21,6 +21,8 @@ from sparkinclimate.places import Communes
 
 
 class PDFDocument(object):
+    tagger=None
+
     month_names = [None, "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août",
                    "Septembre", "Octobre", "Novembre", "Décembre"]
 
@@ -52,16 +54,20 @@ class PDFDocument(object):
     def __load(self):
         if not self.__loaded:
             self.__communes = Communes()
-            tagdir = 'treetagger/'
-            if sys.platform.startswith('win'):
-                tagdir = 'treetagger-win/'
-            self.__tagger = treetaggerwrapper.TreeTagger(TAGLANG='fr', TAGDIR=tagdir, TAGINENC='utf-8',
-                                                         TAGOUTENC='utf-8')
+            if PDFDocument.tagger:
+                self.__tagger=PDFDocument.tagger
+            else:
+                tagdir = 'treetagger/'
+                if sys.platform.startswith('win'):
+                    tagdir = 'treetagger-win/'
+                self.__tagger = treetaggerwrapper.TreeTagger(TAGLANG='fr', TAGDIR=tagdir, TAGINENC='utf-8',
+                                                             TAGOUTENC='utf-8')
+                PDFDocument.tagger=self.__tagger
 
             self.__stemmer = FrenchStemmer()
             self.__lexical = []
             files = ['data/lexical/meteo-facts.csv', 'data/lexical/meteo-words.csv',
-                     'data/lexical/phenomenes-meteo-franc.csv']
+                     'data/lexical/phenomenes-meteo-france.csv']
             for filename in files:
                 file = open(filename, "r", encoding='utf-8')
                 try:
@@ -255,10 +261,12 @@ class PDFDocument(object):
 
     def __pos_tags(self, text):
         tags = []
-        for tag in self.__tagger.TagText(text):
-            fields = re.split("\t", tag)
-            if len(fields) > 2:
-                tags.append(fields)
+        if text:
+            if text!='':
+                for tag in self.__tagger.TagText(text):
+                    fields = re.split("\t", tag)
+                    if len(fields) > 2:
+                        tags.append(fields)
         return tags
 
 

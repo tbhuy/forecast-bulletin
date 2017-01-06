@@ -19,7 +19,7 @@ nsfacts = api.namespace('facts', description='Facts extraction API')
 
 regions = []
 try:
-    file = open('resources/region_list.csv', "r", encoding='utf-8')
+    file = open('data/region_list.csv', "r", encoding='utf-8')
     reader = csv.reader(file, delimiter="\t", quotechar='"')
     first = True
     for row in reader:
