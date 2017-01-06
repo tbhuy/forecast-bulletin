@@ -25,35 +25,30 @@ SparkInClimate is open source project publically available on Bitbucket. To clon
 
 
 
-Run the following command to build the docker image *sparkinclimate* from web directory
+Docker
+=================
+
+Sparkinclimate is avaulable as a docker image based on the latest Ubuntu version.
+The following command allows to build the docker image *sparkinclimate*.
 
 .. code-block:: bash
 
 	docker build -t sparkinclimate:latest .
 
-Run the Docker the container¶
+In order to run the docker container, be sure that Docker is installed and running then use the next command line.
 
 .. code-block:: bash
 
-	docker run -d -p 5000:5000 sparkinclimate
+	docker run --name=sparkinclimate --restart unless-stopped -d -p 7070:7070 sparkinclimate
 
-	docker build -t sparkinclimate:latest .
-	docker run --name=sparkinclimate --restart unless-stopped -d -p 5000:5000 sparkinclimate
-	docker logs -f sparkinclimate
-
-
-Stop the Docker the container¶
-
-.. code-block:: bash
-
-	docker ps
-	docker stop <container_id>
 
 
 Download dataset
 ==================
 
-To donwload the dataset of weatehr newslatter from Meteo France since 2012, run the following commnand line.
+Weather newsletters are available for download in PDF format from the web site of Meteo France.
+The following command line allows to build a dataset of weather newsletters since 2012.
+By default, PDF file are stored in "dataset" directory. This ouput directory can be changed using  "out" option.
 
 .. code-block:: bash
 
@@ -63,11 +58,49 @@ To donwload the dataset of weatehr newslatter from Meteo France since 2012, run 
 Process PDF files
 =================
 
-In order to extract facts from pdf files, run the following commnand line.
+Weather newsletters from Meteo France include a list of important facts, for instance, storms, snow, flooding, etc.  By processing PDF files, weather facts are extracted and represented as a JSON object.
+The following command line allows to process the downloaded dataset of newsletters files (see previous section).By default, input PDF files are stored in "dataset" directory. This input directory can be changed using "input" argument.
+By default, the output of processed files is redirected to the console. The "—out" argument allow to redirect the output to a text file.  In order to insert facts into ElasticSearch database, the host of ElasticSearch server must be entered using "—elasticsearch” option.
+
 
 .. code-block:: bash
 
 	./bin/process --input dataset
+
+
+REST service
+=================
+
+All features for PSF file processing and weather facts extraction are available through  REST service. The following command line allow to run REST server on localhost on port 7070.
+
+.. code-block:: bash
+
+	./bin/start-server --host 127.0.0.1 --port 7070
+
+The following table summarize available methods through the RESTful API server.  All  methods are self-documented using OpenAPI (fka Swagger) specifications, so interactive documentation UI is in place;
+More details about the input and the ouput of each method are available on server base URL path, for instance `http://127.0.0.1:7070 <http://127.0.0.1:7070>`_.
+
++-------------+-------------------------+----------------------------------------------------------------------------+
+| HTTP Method | Path                    | Description                                                                |
++=============+=========================+============================================================================+
+| GET         | /dates/extract          | Extracts and resolve date and periods from a text based on contextual date |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| POST        | /facts/extract          | Extracts weather facts from PDF document of Meteo France weather reports   |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| POST        | /pdf/logical            | Transforms PDF document into a logically structured HTML                   |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| POST        | /pdf/parse              | Transforms PDF document to HMTL                                            |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| GET         | /pdf/template/{id}      | Retrieve the template using its identifier                                 |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| GET         | /pdf/templates          | Retrieve the liste of templates                                            |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| POST        | /places/annotate        | Extract mentioned places in a text                                         |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| GET         | /places/lookup/{name}   | Retrieve a place using its respective name                                 |
++-------------+-------------------------+----------------------------------------------------------------------------+
+| GET         | /search/facts           | Transforms PDF to logical structure                                        |
++-------------+-------------------------+----------------------------------------------------------------------------+
 
 
 Version
