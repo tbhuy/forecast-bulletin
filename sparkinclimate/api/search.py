@@ -31,13 +31,12 @@ search_args.add_argument('geo_query', type=str, required=False, default='43.6,1.
 
 @nssearch.route('/facts')
 class Search(Resource):
-    '''Extracts logical structure from PDF'''
 
     @nssearch.doc('get_dates_extract')
     @nssearch.marshal_with(facts)
     @nssearch.expect(search_args, validate=True)
     def get(self):
-        '''Transforms PDF to logical structure'''
+        '''Searchs weather facts  by query, time interval and location.'''
 
         es = Elasticsearch(['http://ns3038079.ip-5-135-160.eu/'])
         args = search_args.parse_args()

@@ -60,13 +60,15 @@ Process PDF files
 
 Weather newsletters from Meteo France include a list of important facts, for instance, storms, snow, flooding, etc.  By processing PDF files, weather facts are extracted and represented as a JSON object.
 The following command line allows to process the downloaded dataset of newsletters files (see previous section).By default, input PDF files are stored in "dataset" directory. This input directory can be changed using "input" argument.
-By default, the output of processed files is redirected to the console. The "—out" argument allow to redirect the output to a text file.  In order to insert facts into ElasticSearch database, the host of ElasticSearch server must be entered using "—elasticsearch” option.
+By default, the output of processed files is redirected to the console. The "--out" argument allow to redirect the output to a text file.  In order to insert facts into ElasticSearch database, the host of ElasticSearch server must be entered using "--elasticsearch” option.
 
 
 .. code-block:: bash
 
 	./bin/process --input dataset
 
+
+More information about how weather facts are represented is available on  `sparkinkb <https://bitbucket.org/sparkindata-irit/sparkinkb>`_. project.
 
 REST service
 =================
@@ -99,8 +101,9 @@ More details about the input and the ouput of each method are available on serve
 +-------------+-------------------------+----------------------------------------------------------------------------+
 | GET         | /places/lookup/{name}   | Retrieve a place using its respective name                                 |
 +-------------+-------------------------+----------------------------------------------------------------------------+
-| GET         | /search/facts           | Transforms PDF to logical structure                                        |
+| GET         | /search/facts           | Searchs weather facts by query, time interval and location                 |
 +-------------+-------------------------+----------------------------------------------------------------------------+
+
 
 
 Version
