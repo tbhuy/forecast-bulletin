@@ -1,5 +1,3 @@
-#!/usr/bin/env /python
-
 import argparse
 import configparser
 import csv
@@ -55,7 +53,7 @@ if __name__ == '__main__':
                  31]
 
     regions = {}
-    with open('data/region_list.csv', 'r', encoding='utf8') as file:
+    with open('/sparkinclimate/data/region_list.csv', 'r', encoding='utf8') as file:
         reader = csv.reader(file, delimiter='\t')
         for row in reader:
             regions[row[0]] = row[1]
@@ -71,7 +69,7 @@ if __name__ == '__main__':
                 if month < 10:
                     str_month = "0" + str(month)
                 url = url_pattern % (region_id, str_year, str_month)
-                filename = args.out + "/" + norm_region_name.lower() + "/meteo_" + str(
+                filename = args.out + "./" + norm_region_name.lower() + "/meteo_" + str(
                     i) + "_" + norm_region_name.lower() + "_" + str_year + "-" + str_month + "-" + str(
                     moth_days[month - 1]) + ".pdf"
                 if not os.path.exists(filename):

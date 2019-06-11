@@ -109,7 +109,7 @@ More details about the input and the ouput of each method are available on serve
 Version
 ===============
 
-SparkInClimate 0.0.1
+SparkInClimate 0.0.1b
 
 
 Contributors
@@ -118,6 +118,7 @@ Contributors
 The following people have contributed to this code:
 
 - Lamjed Ben Jabeur `Lamjed.Ben-Jabeur@irit.fr <mailto:Lamjed.Ben-Jabeur@irit.fr>`_.
+  Ba Huy Tran `ba-huy.tran@irit.fr <mailto:ba-huy.tran@irit.fr>`_.
 
 License
 ===============

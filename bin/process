@@ -1,5 +1,3 @@
-#!/usr/bin/env /python
-
 import argparse
 import configparser
 import os
@@ -11,7 +9,7 @@ from elasticsearch import Elasticsearch
 
 sys.path.append('..')
 sys.path.append(os.getcwd())
-
+ENV PYTHONPATH /sparkinclimate
 from sparkinclimate.pdf import PDFDocument
 
 
