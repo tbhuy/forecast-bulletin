@@ -5,7 +5,7 @@ import sys
 
 sys.path.append('..')
 sys.path.append(os.getcwd())
-ENV PYTHONPATH /sparkinclimate
+
 from sparkinclimate.api import app
 import sparkinclimate.api.dates
 import sparkinclimate.api.places
