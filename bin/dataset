@@ -62,7 +62,7 @@ if __name__ == '__main__':
     for region_id in sorted(regions):
         region_name = regions[region_id]
         norm_region_name = TextUtils.normalize(region_name)
-        for year in range(2012, int(d_year) + 1):
+        for year in range(2019, int(d_year) + 1):
             str_year = str(year)
             for month in range(1, 13):
                 str_month = str(month)
