@@ -89,7 +89,7 @@ RUN sh install-tagger.sh
 ENV PATH=$PATH:/sparkinclimate/treetagger/cmd:/sparkinclimate/treetagger/bin
 ENV PATH=${PATH}:/usr/bin/python3
 ENV PYTHONPATH={PYTHONPATH}:/sparkinclimate
-
+WORKDIR ..
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 CMD ["/entrypoint.sh"]
