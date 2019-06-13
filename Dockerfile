@@ -25,6 +25,7 @@ RUN pip3 install requests
 RUN pip3 install argparse
 RUN pip3 install configparser
 RUN pip3 install python-csv 
+RUN pip3 install elasticsearch
 RUN python3 -m nltk.downloader punkt
 RUN python3 -m nltk.downloader stopwords
 RUN python3 -m nltk.downloader snowball_data
